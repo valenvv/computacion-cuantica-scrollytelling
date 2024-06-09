@@ -1,84 +1,160 @@
 <script>
-  import Scroller from "@sveltejs/svelte-scroller"
-  import {onMount} from "svelte"
-  import * as d3 from "d3"
+  import Scroller from "@sveltejs/svelte-scroller";
+  import { onMount } from "svelte";
+  import * as d3 from "d3";
 
-  import Medallero from "./components/Medallero.svelte"
-  import DebugScroller from "./components/DebugScroller.svelte"
-  import Loremipsum from "./components/Loremipsum.svelte"
+  import Medallero from "./components/Medallero.svelte";
+  import DebugScroller from "./components/DebugScroller.svelte";
+  import Loremipsum from "./components/Loremipsum.svelte";
 
   /* Variables para la data del medallero */
-  let deportistas = []
-  let filteredDeportistas = []
+  let deportistas = [];
+  let filteredDeportistas = [];
 
   /* Variables para el scroller1 */
-  let count
-  let index
-  let offset
-  let progress
-  let top = 0.1
-  let threshold = 0.5
-  let bottom = 0.9
+  let count;
+  let index;
+  let offset;
+  let progress;
+  let top = 0.1;
+  let threshold = 0.5;
+  let bottom = 0.9;
 
   /* Variables para el scroller 2 */
-  let count2
-  let index2
-  let offset2
-  let progress2
-  let top2 = 0.1
-  let threshold2 = 0.5
-  let bottom2 = 0.9
+  let count2;
+  let index2;
+  let offset2;
+  let progress2;
+  let top2 = 0.1;
+  let threshold2 = 0.5;
+  let bottom2 = 0.9;
 
   /* Charts */
   let charts = {
     0: "lines_01.png",
     1: "lines_02.png",
     2: "lines_03.png",
+  };
+
+  let canvas, ctx;
+
+  function drawBlochSphere(rotation = 0) {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    ctx.save();
+    ctx.translate(canvas.width / 2, canvas.height / 2);
+    ctx.rotate(rotation);
+
+    ctx.beginPath();
+    ctx.arc(0, 0, 45, 0, Math.PI * 2);
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.ellipse(0, 0, 45, 20, 0, 0, Math.PI);
+    ctx.stroke();
+
+    ctx.save();
+    ctx.setLineDash([5, 5]);
+    ctx.beginPath();
+    ctx.ellipse(0, 0, 45, 20, 0, Math.PI, 2 * Math.PI);
+    ctx.stroke();
+    ctx.restore();
+
+    ctx.beginPath();
+    ctx.ellipse(0, 0, 20, 45, 0, Math.PI / 2, 3 * Math.PI / 2);
+    ctx.stroke();
+
+    ctx.save();
+    ctx.setLineDash([5, 5]);
+    ctx.beginPath();
+    ctx.ellipse(0, 0, 20, 45, 0, 3 * Math.PI / 2, Math.PI / 2);
+    ctx.stroke();
+    ctx.restore();
+
+    ctx.beginPath();
+    ctx.arc(0, 0, 3, 0, Math.PI * 2);
+    ctx.fill();
+
+    ctx.lineWidth = 3;
+
+    ctx.strokeStyle = 'rgba(0, 0, 255, 0.3)';
+    ctx.beginPath();
+    ctx.moveTo(0, 0);
+    ctx.lineTo(0, -45);
+    ctx.stroke();
+
+    ctx.strokeStyle = 'rgba(0, 0, 255, 0.9)';
+    ctx.beginPath();
+    ctx.moveTo(0, 0);
+    ctx.lineTo(0, -15);
+    ctx.stroke();
+
+    ctx.restore();
+
+    ctx.lineWidth = 1.5;
+
+    ctx.beginPath();
+    ctx.moveTo(0, 0);
+    ctx.lineTo(30, -2);
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.arc(30, -2, 2, 0, Math.PI * 2);
+    ctx.fill();
   }
 
   onMount(() => {
     d3.csv("./data/deportistas.csv", d3.autoType).then(data => {
-      deportistas = data
-      filteredDeportistas = deportistas
-    })
-  })
+      deportistas = data;
+      filteredDeportistas = deportistas;
+    });
+
+    canvas = document.getElementById('bloch');
+    ctx = canvas.getContext('2d');
+
+    canvas.width = 100;
+    canvas.height = 100;
+
+    drawBlochSphere();
+
+    window.addEventListener('scroll', handleScroll);
+  });
+
+  function handleScroll() {
+    const rotation = window.scrollY * 0.01; // Adjust the factor as needed
+    drawBlochSphere(rotation);
+  }
 
   $: {
     // Es un observer que se ejecuta cuando cambia el valor de index
     switch (index) {
       case 0:
-        filteredDeportistas = deportistas
-        break
+        filteredDeportistas = deportistas;
+        break;
       case 1:
-        filteredDeportistas = deportistas.filter(d => d.genero === "F")
-        break
+        filteredDeportistas = deportistas.filter(d => d.genero === "F");
+        break;
       case 2:
-        filteredDeportistas = deportistas.filter(d => d.genero === "M")
-        break
+        filteredDeportistas = deportistas.filter(d => d.genero === "M");
+        break;
       case 3:
         filteredDeportistas = deportistas.filter(
           d => d.continente === "América",
-        )
-        break
+        );
+        break;
       default:
-        filteredDeportistas = deportistas
+        filteredDeportistas = deportistas;
     }
-    console.log(filteredDeportistas)
+    console.log(filteredDeportistas);
   }
 </script>
 
 <main>
   <div class="header">
-    <img src="/images/olympics-logo.png" width="100" alt="anillos" />
-    <h3 class="headline">
-      <b>Triunfos Olímpicos</b>
-      Medallas, alturas y continentes
-    </h3>
-    <p class="bajada">Explorando los logros olímpicos a través de datos</p>
-    <div class="lorem_ipsum">
-      <Loremipsum />
-    </div>
+
+    <h1 class="headline"> Computación Cuántica</h1>
   </div>
+  <canvas id="bloch"></canvas>
 
   {#if progress < 1}
   <DebugScroller
@@ -132,7 +208,6 @@
   <div class="lorem_ipsum">
     <Loremipsum />
   </div>
-  
 
   <!-- Segundo scroller -->
   <Scroller
@@ -176,8 +251,7 @@
 </div>
 
 <style>
-
-  .header {
+.header {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -185,22 +259,41 @@
     margin-top: 50px;
     margin-bottom: 80px;
   }
+
+  /*  Animación color del título*/
+  @keyframes gradientShift {
+    0% {
+      background-position: 0% 50%;
+    }
+    25% {
+      background-position: 50% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    75% {
+      background-position: 50% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
   .headline {
-    font-size: 30px;
+    font-size: 60px;
     line-height: 1.2;
-    font-weight: normal;
+    font-weight:bolder;
     text-align: center;
     margin: 20px;
+    background: linear-gradient(90deg,#7DEFE0, #87FF8C, #FF667A, #3D46F2);
+    background-size: 200% 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: gradientShift 4s cubic-bezier(0.42, 0, 0.58, 1) infinite;
   }
-  .bajada {
-    font-size: 18px;
-    font-weight: normal;
-    text-align: center;
-    margin: 10px;
-  }
-  .headline b {
-    display: block;
-  }
+
+
 
   /* Estilos para el scroller */
   .foreground_container {
@@ -233,4 +326,6 @@
     align-items: center;
     height: 100vh;
   }
+
+  
 </style>
