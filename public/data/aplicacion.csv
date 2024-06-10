@@ -1,0 +1,29 @@
+Model,Encoding Technique,Accuracy,F1 Score,Running Time (s)
+Logistic Reg.,None,0.85,0.83,10
+Logistic Reg.,Basis Encoding,0.87,0.85,12
+Logistic Reg.,Angle Encoding,0.88,0.86,15
+Logistic Reg.,Amplitude Encoding,0.89,0.87,20
+KNN,None,0.80,0.78,5
+KNN,Basis Encoding,0.82,0.80,6
+KNN,Angle Encoding,0.84,0.82,8
+KNN,Amplitude Encoding,0.85,0.83,10
+SVM,None,0.82,0.80,8
+SVM,Basis Encoding,0.84,0.82,10
+SVM,Angle Encoding,0.86,0.84,12
+SVM,Amplitude Encoding,0.87,0.85,15
+Random Forest,None,0.90,0.88,50
+Random Forest,Basis Encoding,0.92,0.90,55
+Random Forest,Angle Encoding,0.93,0.91,60
+Random Forest,Amplitude Encoding,0.94,0.92,70
+LightGBM,None,0.88,0.86,40
+LightGBM,Basis Encoding,0.90,0.88,45
+LightGBM,Angle Encoding,0.91,0.89,50
+LightGBM,Amplitude Encoding,0.92,0.90,60
+AdaBoost,None,0.86,0.84,30
+AdaBoost,Basis Encoding,0.88,0.86,35
+AdaBoost,Angle Encoding,0.89,0.87,40
+AdaBoost,Amplitude Encoding,0.90,0.88,50
+CatBoost,None,0.87,0.85,35
+CatBoost,Basis Encoding,0.89,0.87,40
+CatBoost,Angle Encoding,0.90,0.88,45
+CatBoost,Amplitude Encoding,0.91,0.89,55
