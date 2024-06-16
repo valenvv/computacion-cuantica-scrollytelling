@@ -7,6 +7,12 @@
   import DebugScroller from "./components/DebugScroller.svelte";
   import Loremipsum from "./components/Loremipsum.svelte";
 
+  // timeline
+  import { Timeline, TimelineElement } from 'svelte-animated-timeline';
+
+	// import WorkIcon from '$lib/components/WorkIcon.svelte';
+  
+
   /* Variables para la data del medallero */
   let deportistas = [];
   let filteredDeportistas = [];
@@ -154,7 +160,7 @@
 
     <h1 class="headline"> Computación Cuántica</h1>
   </div>
-  <canvas id="bloch"></canvas>
+  <!-- <canvas id="bloch"></canvas> -->
 
   {#if progress < 1}
   <DebugScroller
@@ -164,7 +170,7 @@
     progress={progress}
   />
   {/if}
-  <!-- Primer scroller -->
+  <!-- Primer scroller
   <Scroller
     top={top}
     threshold={threshold}
@@ -207,7 +213,7 @@
 
   <div class="lorem_ipsum">
     <Loremipsum />
-  </div>
+  </div> -->
 
   <!-- Segundo scroller -->
   <Scroller
@@ -256,8 +262,8 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 50px;
-    margin-bottom: 80px;
+    margin-top: 120px;
+    margin-bottom: 120px;
   }
 
   /*  Animación color del título*/
