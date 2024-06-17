@@ -7,6 +7,7 @@
   import Medallero from "./components/Medallero.svelte";
   import DebugScroller from "./components/DebugScroller.svelte";
   import Loremipsum from "./components/Loremipsum.svelte";
+  import Stars from "./components/stars.svelte";
 
   // timeline
   import { Timeline, TimelineElement } from 'svelte-animated-timeline';
@@ -157,13 +158,15 @@
 </script>
 
 <main>
-  <div class="header">
+  <Stars/>
+
+  <section class="header">
 
     <h1 class="headline"> Computación Cuántica</h1>
-  </div>
+  </section>
   <!-- <canvas id="bloch"></canvas> -->
 
-  <div class=introduccion>
+  <section class=intro-section>
     <div class="contenido">
       <p>
         La computación cuántica es un campo de estudio que aplica los principios de la mecánica cuántica, 
@@ -175,8 +178,6 @@
       <p>
       <img src="public/images/quantumComputer.png" alt="">
     </div>
-  </div>
-  <div class="introduccion">
     <div class="contenido">
       <p>
         Los Qubits permiten a los ordenadores cuánticos procesar una gran cantidad de información simultáneamente. 
@@ -189,7 +190,8 @@
       </p>
       <img src="public/images/quantumComputer.png" alt="">
     </div>
-  </div>
+
+  </section>
 
 
   {#if progress < 1}
@@ -294,6 +296,7 @@
     flex-direction: column;
     margin-top: 120px;
     margin-bottom: 120px;
+    z-index: 1;
   }
 
   /*  Animación color del título*/
@@ -327,6 +330,7 @@
     -webkit-background-clip: text;
     color: transparent;
     animation: gradientShift 4s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+    z-index: 1;
   }
 
 
@@ -364,5 +368,35 @@
   }
 
   /* Introducción */
+  .intro-section {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 20px;
+    /*background: #1e1e1e;*/
+    margin: 20px 0;
+    z-index: 2;
+  }
+
+  .contenido {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    z-index: 2;
+  }
+
+  .contenido p {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1;
+  }
+
+  .contenido img {
+    max-width: 100%;
+    width: 600px;
+    z-index: 1;
+  }
   
 </style>
