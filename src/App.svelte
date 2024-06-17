@@ -1,3 +1,4 @@
+
 <script>
   import Scroller from "@sveltejs/svelte-scroller";
   import { onMount } from "svelte";
@@ -161,6 +162,35 @@
     <h1 class="headline"> Computación Cuántica</h1>
   </div>
   <!-- <canvas id="bloch"></canvas> -->
+
+  <div class=introduccion>
+    <div class="contenido">
+      <p>
+        La computación cuántica es un campo de estudio que aplica los principios de la mecánica cuántica, 
+        una rama de la física que describe el comportamiento de las partículas a nivel subatómico, 
+        a la informática.
+        A diferencia de la computación clásica, que utiliza bits que pueden estar en uno de dos estados (0 o 1), 
+        la computación cuántica utiliza bits cuánticos, o qubits, que pueden existir en múltiples 
+        estados a la vez.
+      <p>
+      <img src="public/images/quantumComputer.png" alt="">
+    </div>
+  </div>
+  <div class="introduccion">
+    <div class="contenido">
+      <p>
+        Los Qubits permiten a los ordenadores cuánticos procesar una gran cantidad de información simultáneamente. 
+        Esto tiene el potencial de resolver problemas que son inabordables para los ordenadores clásicos, 
+        abriendo nuevas posibilidades en campos como la criptografía, la optimización de sistemas complejos, la simulación 
+        de materiales y medicamentos a nivel molecular, entre otros. 
+        
+        Sin embargo, la computación cuántica todavía está en sus primeras etapas de desarrollo y presenta muchos desafíos 
+        técnicos y teóricos.
+      </p>
+      <img src="public/images/quantumComputer.png" alt="">
+    </div>
+  </div>
+
 
   {#if progress < 1}
   <DebugScroller
@@ -333,5 +363,6 @@
     height: 100vh;
   }
 
+  /* Introducción */
   
 </style>
