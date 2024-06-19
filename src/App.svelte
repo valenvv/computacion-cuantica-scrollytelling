@@ -192,6 +192,23 @@
     </div>
 
   </section>
+  <!-- Nueva sección sobre entrelazamiento y superposicion -->
+  <section class="Superpos-section">
+    <div class="contenido">
+      <h2>Superposición</h2>
+        <p>
+          las partículas cuánticas son una combinación de todos los estados posibles. Fluctúan hasta que se observan y se miden. Una forma de ilustrar la diferencia entre la posición binaria y la superposición es imaginar una moneda. Los bits clásicos se miden "volteando la moneda" y obteniendo cara o cruz. Sin embargo, si fuese posible mirar una moneda y ver las dos caras a la vez, y todos los estados entre medias, la moneda estaría en una superposición.     
+        </p>
+    </div>
+  </section>
+  <section class="entrelazamiento-section">
+    <div class="contenido">
+      <h2>Entrelazamiento</h2>
+      <p>
+        El entrelazamiento cuántico es un fenómeno en el que dos qubits (o dos o más partículas cuánticas cualesquiera) se entrelazan de tal forma que el estado de una partícula no puede describirse independientemente del estado de la otra, sin importar la distancia que las separe.      
+      </p>
+    </div>
+  </section>
 
 
   {#if progress < 1}
@@ -397,6 +414,97 @@
     max-width: 100%;
     width: 600px;
     z-index: 1;
+  }
+  /* Estilos para la sección de Superposición */
+  .Superpos-section {
+   
+    padding: 50px 20px;
+    position: relative;
+  }
+
+  .Superpos-section .contenido {
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+
+  .Superpos-section h2 {
+  
+    font-size: 36px;
+    margin-bottom: 10px;
+    position: relative;
+    transform: translate(93%, -240%);
+    
+  }
+
+  .Superpos-section p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    position: relative;
+    transform: translate( -10%, 10%);
+  }
+
+  /* Estilos para la sección de Entrelazamiento */
+  .entrelazamiento-section {
+    position: relative;
+    padding: 50px 20px;
+    /* Ajusta el padding según sea necesario */
+  }
+
+  .entrelazamiento-section .contenido {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    margin-bottom: 20px;
+  }
+
+  .entrelazamiento-section h2 {
+    font-size: 36px;
+    position: relative;
+    margin-bottom: 10px;
+  }
+
+  .entrelazamiento-section p {
+    font-size: 18px;
+    position: relative;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+
+  /* Estilos para la sección de Entrelazamiento */
+  .entrelazamiento-section {
+  
+    padding: 50px 20px;
+    position: relative;
+  }
+
+  .entrelazamiento-section .contenido {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    position: relative; /* Puede ser eliminado si no se necesita */
+  }
+
+  .entrelazamiento-section h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    transform: translate(3%, -190%);
+  }
+
+  .entrelazamiento-section p {
+    font-size: 18px;
+    
+    line-height: 1.6;
+    margin-bottom: 20px;
+    transform: translate( -100%, 10%);
   }
   
 </style>
