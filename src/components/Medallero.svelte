@@ -1,114 +1,157 @@
-<script>
-  import * as d3 from "d3"
-  import {onMount} from "svelte"
+<script> 
+  import Scroller from "@sveltejs/svelte-scroller";
+  /* Variables para el scroller 2 */
+  let count2;
+  let index2;
+  let offset2;
+  let progress2;
+  let top2 = 0.1;
+  let threshold2 = 0.5;
+  let bottom2 = 0.9;
 
-  /* Propiedad donde guardaremos la data */
-  export let deportistas = []
-
-  /* 1. Escala para edades */
-  let grosor = d3.scaleLinear().range([5, 20])
-
-/* 2. Escala para genero */
-let colorGenero = d3
-  .scaleOrdinal()
-  .domain(["F", "M"])
-  .range(["#ffc0cb", "#c0f9ff"])
-
-/* 3. Escala para continentes */
-let colorContinentes = d3
-  .scaleOrdinal()
-  .domain(["América", "África", "Asia", "Europa", "Oceanía"])
-  .range(["#ed334e", "#000000", "#fbb132", "#009fe3", "#00963f"])
-
-/* 4. Escala para altura */
-let radioAltura = d3.scaleRadial()
-
-/* 5. Escala para medallas */
-let colorMedalla = d3
-  .scaleOrdinal()
-  .domain(["Oro", "Plata", "Bronce"])
-  .range(["gold", "silver", "brown"])
-
-/* $: Data reactiva, cuando cambia data se ejecuta este bloque */
-$: {
-  /* Actualizamos dominio con la data de edad */
-  let minMaxEdad = d3.extent(deportistas, d => d.edad)
-  grosor = grosor.domain(minMaxEdad)
-  
-  /* Actualizamos dominio y rango con la data de altura */
-  let minMaxAltura = d3.extent(deportistas, d => d.altura)
-  radioAltura = radioAltura.domain(minMaxAltura).range([25, 50])
-  
-}
+  /* Charts */
+  let charts = {
+    0: "entrelazamiento1.png",
+    1: "entrelazamiento2.png",
+    2: "entrelazamiento3.png",
+    3: "entrelazamiento4.png",
+  };
+  let showImage = true;
+  $: showImage = progress2 < 0.15;
 </script>
 
-
-<div class="container">
-  <!-- Iteramos la data para visualizar c/ entidad -->
-  {#each deportistas as dep, index}
-    <div class="person-container">
-      <div
-        class="medal"
-        style="background-color: {colorMedalla(dep.medalla)}"
-      ></div>
-      <div
-        class="person"
-        style="border-width: {grosor(dep.edad)}px; 
-        background-color:{colorGenero(dep.genero)}; 
-        width: {2 * radioAltura(dep.altura)}px; 
-        height: {2 * radioAltura(dep.altura)}px; 
-        border-color: {colorContinentes(dep.continente)};
-        "
-      ></div>
-      <p class="name">
-        <b>{dep.nombre}</b>
-        <br />
-        {dep.continente}
-      </p>
-    </div>
-  {/each}
-</div>
-
+<main>
+  <section class="entrelazamiento-section"  >
+    
+    
+    <!-- Segundo scroller -->
+    <Scroller
+      top={0}
+      threshold={0.8}
+      bottom={0.3}
+      bind:count={count2}
+      bind:index={index2}
+      bind:offset={offset2}
+      bind:progress={progress2}
+    >
+      <div slot="background" class="image_container">
+        {#if showImage}
+        <img src="/images/{charts[index2]}" alt="chart {index2}" class="charts"
+        />
+        {/if}
+      </div>
+      <div slot="foreground" class="foreground_container">
+        <div class="contenido">
+          <h2>Entrelazamiento</h2>
+          <p>
+            El entrelazamiento cuántico es un fenómeno en el que dos qubits (o dos o más partículas cuánticas cualesquiera) se entrelazan de tal forma que el estado de una partícula no puede describirse independientemente del estado de la otra, sin importar la distancia que las separe.      
+          </p>
+        </div>
+      </div>
+    </Scroller>
+  
+  
+  </section>
+</main>
 <style>
-  .container {
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    margin: auto;
-    flex-wrap: wrap;
-    max-width: 1000px;
-    gap: 30px;
-    margin-bottom: 100px;
+  /* Estilos para el scroller */
+
+  .image_container {
+    position: relative;
+    padding-bottom: 56.25%; /* Proporción 16:9 (para mantener la relación de aspecto) */
+    overflow: hidden;
+    width: 50%; /* Ajusta el ancho del contenedor según tus necesidades */
+    margin: auto; /* Centra el contenedor horizontalmente */
+    transform: translate(50%, 0%);
   }
-  .person-container {
+
+  .image_container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+  }
+
+  .foreground_container {
+    pointer-events: none;
+    
+  }
+
+  .step_foreground {
     display: flex;
-    justify-content: center;
-    flex-direction: column;
+    justify-content: end;
     align-items: center;
-    flex: 180px 0 0;
+    height: 0vh;
+    
+  
+    padding: 1em;
+    margin: 0 0 2em 0;
   }
-  .person {
-    width: 100px;
-    height: 100px;
-    border: 10px solid black;
-    border-radius: 50%;
-    box-sizing: border-box;
-    background-color: pink;
-    /* Transicion para el cambio de data */
-    transition: all 0.5s ease-in-out;
+  
+
+  .image_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
   }
-  .medal {
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    background-color: gold;
-    margin: 5px 0;
+   /* Estilos para la sección de Entrelazamiento */
+   .entrelazamiento-section {
+    position: relative;
+    padding: 50px 20px;
+    /* Ajusta el padding según sea necesario */
   }
-  .name {
-    font-size: 14px;
-    color: rgb(65, 65, 65);
-    font-weight: normal;
-    text-align: center;
-    margin-top: 5px;
+
+  .entrelazamiento-section .contenido {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    margin-bottom: 20px;
+  }
+
+  .entrelazamiento-section h2 {
+    font-size: 36px;
+    position: relative;
+    margin-bottom: 10px;
+  }
+
+  .entrelazamiento-section p {
+    font-size: 18px;
+    position: relative;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+
+  /* Estilos para la sección de Entrelazamiento */
+  .entrelazamiento-section {
+    
+    padding: 50px 20px;
+    position: relative;
+  }
+
+  .entrelazamiento-section .contenido {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    position: relative; /* Puede ser eliminado si no se necesita */
+  }
+
+  .entrelazamiento-section h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    transform: translate(3%, -190%);
+  }
+
+  .entrelazamiento-section p {
+    font-size: 18px;
+    background-color: black;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    transform: translate( -100%, 10%);
   }
 </style>
