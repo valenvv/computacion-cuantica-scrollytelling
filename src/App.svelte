@@ -7,7 +7,7 @@
   import DebugScroller from "./components/DebugScroller.svelte";
   import Loremipsum from "./components/Loremipsum.svelte";
   import Stars from "./components/stars.svelte";
-  import Papa from 'papaparse';
+  // import Papa from 'papaparse';
   import Event from './components/Event.svelte';
 
   /* Variables para el scroller */
@@ -58,7 +58,7 @@
       currentIndex = (currentIndex + 1) < 4 ? currentIndex + 1 : 0;
       currentImage = charts[currentIndex];
       changeImage(); // Call the function again to continue the loop
-    }, 60);
+    }, 100);
   }
  
  
@@ -135,7 +135,7 @@
     </div>
   </div>
 
-  <div class="qubits section">
+  <div class="qubits ">
     <div class="contenido">
       <h2>Qubits</h2>
       <p>
@@ -144,7 +144,7 @@
     </div>
   </div>
 
-  <div id="cards" class="section">
+  <div id="cards" >
     <ul>
       <li class="card" style="--index: 1;">
           <div class="card__content">
@@ -169,7 +169,7 @@
     </ul>
 </div>
 
-<div class="barras section">
+<div class="barras">
   <Scroller
 top={top2}
 threshold={threshold2}
@@ -212,7 +212,7 @@ bind:progress={progress2}
   </Scroller>
   </div>
 
-  <div class="historia section">
+  <div class="historia">
     <div class="contenido">
       <h2>Historia y evolución</h2>
       <h3>Hitos importantes en la computación cuántica</h3>
@@ -223,7 +223,7 @@ bind:progress={progress2}
         <Event {name} date={date} left={i % 2 === 0} eventID={name} />
     {/each}
 </div>    
-<div class="aplicacion section">
+<div class="aplicacion">
   <div class="contenido">
     <h2>Aplicaciones de la computación cuántica en el machine learning</h2>
     <p>
@@ -252,7 +252,7 @@ bind:progress={progress2}
   .charts {
     width: 50vw;
   }
-  .section {
+  .section { /*si no usamos secciones borrar */
     scroll-snap-align: start;
     height: 100vh;
   }
@@ -289,7 +289,7 @@ bind:progress={progress2}
     line-height: 1.2;
     font-weight: bolder;
     text-align: center;
-    background: linear-gradient(90deg, #7defe0, #87ff8c, #ff667a, #3d46f2);
+    background: linear-gradient(90deg,  #CB9BFF, #3D46F2);
     background-size: 200% 200%;
     background-clip: text;
     -webkit-background-clip: text;
