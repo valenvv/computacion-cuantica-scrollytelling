@@ -7,13 +7,10 @@
   import DebugScroller from "./components/DebugScroller.svelte";
   import Loremipsum from "./components/Loremipsum.svelte";
   import Stars from "./components/stars.svelte";
-  
+  import Papa from 'papaparse';
+  import Event from './components/Event.svelte';
 
-  // timeline
-  import { Timeline, TimelineItem } from 'flowbite-svelte';
-  import { CalendarWeekSolid } from 'flowbite-svelte-icons';
-
-  /* Variables para el scroller 2 */
+  /* Variables para el scroller */
   let count2
   let index2
   let offset2
@@ -22,13 +19,28 @@
   let threshold2 = 0.5
   let bottom2 = 0.9
 
-  /* Charts */
+  /* barras graf */
   let barras = {
     0: "ionAtrapadoBarras.png",
     1: "atomoNeutroBarras.png",
     2: "spinSemiconductorBarras.png",
     3: "bucleSuperconductorBarras.png",
   }
+
+  /*Timeline*/
+  let events = [];
+
+  const loadCSV = async () => {
+    try {
+        const response = await fetch('/public/data/timeline.csv');
+        const csvData = await response.text();
+        const parsedData = Papa.parse(csvData, { header: true });
+        events = parsedData.data; // Asigna los datos analizados a la variable events
+    } catch (error) {
+        console.error('Error al cargar y analizar el CSV:', error);
+    }
+};
+
 
   let charts = {
     0: "entrelazamiento1.png",
@@ -52,8 +64,9 @@
  
 
   // Call the function to change the image when the component is mounted
-  onMount(() => {
+  onMount(async() => {
     changeImage();
+    await loadCSV();
   });
 </script>
 
@@ -205,7 +218,22 @@ bind:progress={progress2}
       <h3>Hitos importantes en la computación cuántica</h3>
     </div>
   </div>
-
+  <div class="timeline">
+    {#each events as {name, date}, i}
+        <Event {name} date={date} left={i % 2 === 0} eventID={name} />
+    {/each}
+</div>    
+<div class="aplicacion section">
+  <div class="contenido">
+    <h2>Aplicaciones de la computación cuántica en el machine learning</h2>
+    <p>
+      La computación cuántica ha emergido como una tecnología revolucionaria que promete transformar diversos campos, incluyendo el aprendizaje automático. Una de las aplicaciones más prometedoras es la codificación de datos cuánticos, la cual permite mapear datos clásicos a estados cuánticos, mejorando así el rendimiento de los modelos de aprendizaje automático.
+    </p>
+    <p>
+      En numerosos estudios e investigaciones se han evaluado diversas técnicas de codificación de datos cuánticos. En en este caso, nos centraremos en un estudio que analiza las principales técnicas de codificación: codificación en base, codificación en ángulo y codificación en amplitud. Estas técnicas se aplicaron a varios modelos de aprendizaje automático, incluyendo Regresión Logística, K-Nearest Neighbors (KNN), Support Vector Machines (SVM) y varios métodos de ensamblado como Random Forest, LightGBM, AdaBoost y CatBoost.
+    </p>
+  </div>
+</div>
 </main>
 
 <style>
@@ -437,6 +465,7 @@ bind:progress={progress2}
   .foreground_container {
     pointer-events: none;
     padding-left: 50%;
+    margin-top: 500px;
   }
   .step_foreground {
     display: flex;
@@ -495,6 +524,60 @@ bind:progress={progress2}
 
   }
 
-  
+  /*Estilos del timeline*/
+  .timeline {
+        position: relative;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .timeline::after {
+        content: '';
+        position: absolute;
+        width: 3px;
+        background-color: #D9D9D9;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        margin-left: -3px;
+    }
+
+    @media screen and (max-width: 600px) {
+        .timeline::after {
+            left: 31px;
+        }
+    }
+
+  /*Estilos para la sección de aplicación*/
+   
+  .aplicacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+  }
+
+  .aplicacion .contenido {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 800px;
+  }
+
+  .aplicacion h2 {
+    font-size: 46px;
+    margin-bottom: 10px;
+    color: #ffffff;
+  }
+
+  .aplicacion p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 0;
+  }
 
 </style>
+  
+
