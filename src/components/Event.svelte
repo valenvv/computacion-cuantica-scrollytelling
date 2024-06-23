@@ -1,15 +1,28 @@
 <script>
+    import { onMount } from 'svelte';
+    import AOS from 'aos';
+    
     export let name;
     export let date;
     export let left;
     export let eventID;
-   
-</script>
+    export let description;
+    export let author;
   
-  <div class="container" class:left={left} class:right={!left} id={eventID}>
+    onMount(() => {
+      AOS.init();
+    });
+  </script>
+  
+  <svelte:head>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  </svelte:head>
+  
+  <div class="container" class:left={left} class:right={!left} id={eventID} data-aos={left ? 'fade-left' : 'fade-right'}>
     <div class="content">
       <h2>{date}</h2>
       <h2>{name}</h2>
+      <p>{description}</p>
     </div>
   </div>
   
@@ -57,10 +70,17 @@
       height: 20px;
       background-color: rgb(255, 255, 255);
       border-radius: 50%;
-      left: -10px;
       top: 50%;
       transform: translateY(-50%);
+      text-align: justify;
     }
   
+    .left::after {
+      left: 530px;
+    }
+  
+    .right::after {
+      right: 530px;
+    }
   </style>
   

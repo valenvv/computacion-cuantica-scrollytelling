@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@types/d3": "^7.4.3",
+    "aos": "^2.3.4",
     "d3": "^7.9.0",
     "papaparse": "^5.4.1",
     "svelte-animated-timeline": "^0.0.1"
