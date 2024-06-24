@@ -187,7 +187,7 @@
       cuánticos, o qubits, que pueden existir en múltiples estados a la vez.
     </p>
     <p>
-      <img src="public/images/quantumComputer.png" alt="" />
+      <img src="public/images/quantumComputer.jpg" alt="" />
     </p>
   </div>
 
@@ -249,24 +249,44 @@
       <li class="card" style="--index: 1;">
           <div class="card__content">
             <h2 class="card_title">Ion Atrapado</h2>
+            <p>
+              Son partículas atómicas cargadas que se confinan y manipulan utilizando campos electromagnéticos. Destacan por su mayor tiempo de coherencia y una temperatura de operación más alta. No obstante, su principal desventaja radica en el tiempo necesario para manipular el estado de los qubits. Empresas como Honeywell y IonQ emplean este tipo de qubits.
+            </p>
           </div>
       </li>
       <li class="card" style="--index: 2;">
           <div class="card__content">
             <h2 class="card_title">Átomo Neutro</h2>
+            <p>
+              Se codifican en átomos individuales que se enfrían y atrapan en un potencial óptico generado por láseres cruzados. Estos átomos pueden ser manipulados y controlados mediante pulsos de láser locales. Los sistemas de átomos neutros ofrecen ventajas como la escalabilidad potencial a un gran número de qubits y la capacidad de direccionar y manipular individualmente cada qubit1. Sin embargo, también enfrentan desafíos, como la necesidad de mantener los átomos ultrafríos y la complejidad de los sistemas de control.
+            </p>
           </div>
       </li>
       <li class="card" style="--index: 3;">
           <div class="card__content">
             <h2 class="card_title">Spin Semiconductor</h2>
+            <p>usan una propiedad cuántica llamada espín, que puede ser como un “interruptor” que está en posición |0⟩ o |1⟩.
+
+              Estos qubits se encuentran en materiales semiconductores, donde los electrones están atrapados en un lugar pequeño. Para controlar estos qubits, se usan microondas o campos magnéticos.
+              
+              Las ventajas incluyen que pueden usar la tecnología de los semiconductores que ya existe y que pueden mantener su estado cuántico por mucho tiempo. Sin embargo, es difícil controlar el entorno del espín y reducir el ruido.</p>
           </div>
       </li>
       <li class="card" style="--index: 4;">
         <div class="card__content">
           <h2 class="card_title">Bucle Superconductor</h2>
+          <p>utilizan circuitos hechos de materiales superconductores, que pueden conducir electricidad sin resistencia cuando se enfrían a temperaturas muy bajas. Una corriente eléctrica puede circular por un bucle superconductor indefinidamente sin perder energía. Los estados cuánticos se representan mediante diferentes estados de corriente en el bucle.</p>
+          <p>Las ventajas de los qubits de bucles superconductores incluyen tiempos de coherencia relativamente largos y la capacidad de integrarse con la tecnología de circuitos superconductores existente. Sin embargo, también enfrentan desafíos, como la necesidad de mantener temperaturas extremadamente bajas y la complejidad de los sistemas de control</p>
         </div>
       </li>
     </ul>
+</div>
+
+<div class="qubits">
+  <div class="contenido">
+    <p> La capacidad de entrelazar múltiples qubits simultáneamente es crucial para el rendimiento y la potencia de los sistemas cuánticos. Cuantos más qubits se puedan entrelazar simultáneamente, mayor será la capacidad del sistema para resolver problemas complejos y realizar cálculos que están fuera del alcance de las computadoras clásicas. Por lo tanto, la cantidad de qubits que se pueden entrelazar es un indicador clave del potencial y la escalabilidad de una tecnología de qubits.</p>
+    <p>A continuación, se presenta una comparación de la cantidad de qubits que se pueden entrelazar simultáneamente en diferentes sistemas de qubits:</p>
+  </div>
 </div>
 
 <div class="barras">
