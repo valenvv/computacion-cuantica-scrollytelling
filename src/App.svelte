@@ -535,7 +535,11 @@
     --index0: calc(var(--index) - 1); /* 0-based index */
     --reverse-index: calc(var(--numcards) - var(--index0)); /* reverse index */
     --reverse-index0: calc(var(--reverse-index) - 1); /* 0-based reverse index */
-    position: relative; /* Needed for positioning sticky */
+    /* background: lightgray; */
+    padding: 2rem;
+    border-radius: 8px;
+    position: sticky;
+    top: 1rem;
   }
 
   @keyframes scale {
@@ -545,14 +549,14 @@
   }
 
   #cards {
+    display: grid;
       --numcards: 4;
       view-timeline-name: --cards-element-scrolls-in-body;
-      position: relative; /* To ensure sticky positioning works */
-  }
+      gap: 1rem;
+    }
 
   .card__content {
       position: sticky;
-      top: 0;
       --start-range: calc(var(--index0) / var(--numcards) * 100%);
       --end-range: calc((var(--index)) / var(--numcards) * 100%);
 
@@ -569,6 +573,7 @@
 
   li {
       margin: 20px 0;
+
   }
 
   .card__content {
