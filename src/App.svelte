@@ -252,6 +252,7 @@
             <p>
               Son partículas atómicas cargadas que se confinan y manipulan utilizando campos electromagnéticos. Destacan por su mayor tiempo de coherencia y una temperatura de operación más alta. No obstante, su principal desventaja radica en el tiempo necesario para manipular el estado de los qubits. Empresas como Honeywell y IonQ emplean este tipo de qubits.
             </p>
+            <img src="public\images\trapped Ion.png" alt="Ion atrapado" class="ion-atrapado">
           </div>
       </li>
       <li class="card" style="--index: 2;">
@@ -260,6 +261,7 @@
             <p>
               Se codifican en átomos individuales que se enfrían y atrapan en un potencial óptico generado por láseres cruzados. Estos átomos pueden ser manipulados y controlados mediante pulsos de láser locales. Los sistemas de átomos neutros ofrecen ventajas como la escalabilidad potencial a un gran número de qubits y la capacidad de direccionar y manipular individualmente cada qubit1. Sin embargo, también enfrentan desafíos, como la necesidad de mantener los átomos ultrafríos y la complejidad de los sistemas de control.
             </p>
+            <img src="public\images\atomo neutro.png" alt="Atomo neutro" class="atomo-neutro">
           </div>
       </li>
       <li class="card" style="--index: 3;">
@@ -277,6 +279,7 @@
           <h2 class="card_title">Bucle Superconductor</h2>
           <p>utilizan circuitos hechos de materiales superconductores, que pueden conducir electricidad sin resistencia cuando se enfrían a temperaturas muy bajas. Una corriente eléctrica puede circular por un bucle superconductor indefinidamente sin perder energía. Los estados cuánticos se representan mediante diferentes estados de corriente en el bucle.</p>
           <p>Las ventajas de los qubits de bucles superconductores incluyen tiempos de coherencia relativamente largos y la capacidad de integrarse con la tecnología de circuitos superconductores existente. Sin embargo, también enfrentan desafíos, como la necesidad de mantener temperaturas extremadamente bajas y la complejidad de los sistemas de control</p>
+          <img src="public\images\Bucles Superconductores.png" alt="bucle superconductor" class="bucle-super">
         </div>
       </li>
     </ul>
@@ -507,7 +510,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 70vh;
     text-align: center;
   }
 
@@ -549,6 +552,8 @@
   }
 
   #cards {
+    width: 80%;
+    margin: 5% auto;
     display: grid;
       --numcards: 4;
       view-timeline-name: --cards-element-scrolls-in-body;
@@ -563,6 +568,15 @@
       animation: linear scale forwards;
       animation-timeline: --cards-element-scrolls-in-body;
       animation-range: exit-crossing var(--start-range) exit-crossing var(--end-range);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      margin: auto;
+  }
+  .ion-atrapado {
+    margin-bottom: 10px;
   }
 
   /* Basic styling for cards */
