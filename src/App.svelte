@@ -291,16 +291,16 @@
 
 <div class="barras">
   <Scroller
-top={top2}
-threshold={threshold2}
-bottom={bottom2}
-bind:count={count2}
-bind:index={index2}
-bind:offset={offset2}
-bind:progress={progress2}
+  top={top2}
+  threshold={threshold2}
+  bottom={bottom2}
+  bind:count={count2}
+  bind:index={index2}
+  bind:offset={offset2}
+  bind:progress={progress2}
 >
-<div slot="background" class="image_container">
-  <img src="/images/{barras[index2]}" alt="chart {index2}" class="barras"
+<div slot="background" class="image_container" >
+  <img src="/images/{barras[index2]}" alt="chart {index2}" class="barras" width="50%"
   />
 </div>
 <div slot="foreground" class="foreground_container">
@@ -313,19 +313,19 @@ bind:progress={progress2}
   <section class="step_foreground">
     <div class="epi_foreground">
       <h3>Seccion {index2 + 1}</h3>
-      <p>Gráfico 1</p>
+      <p>Gráfico 2</p>
     </div>
   </section>
   <section class="step_foreground">
     <div class="epi_foreground">
       <h3>Seccion {index2 + 1}</h3>
-      <p>Gráfico 1</p>
+      <p>Gráfico 3</p>
     </div>
   </section>
     <section class="step_foreground">
     <div class="epi_foreground">
       <h3>Seccion {index2 + 1}</h3>
-      <p>Gráfico 1</p>
+      <p>Gráfico 4</p>
     </div>
   </section>
   </div>
@@ -582,37 +582,35 @@ bind:progress={progress2}
   }
 
    /* Estilos para el scroller */
+  /* Estilos para el scroller */
   .foreground_container {
     pointer-events: none;
     padding-left: 50%;
   }
+
   .step_foreground {
     display: flex;
-    justify-content: center;
-    align-items:center;
+    justify-content: end;
+    align-items: center;
     height: 100vh;
-    border: 1px solid rgba(255, 0, 0, 0.4);
+    border: 1px solid rgba(0, 0, 0, 0.4);
     color: white;
     padding: 1em;
-    margin: 0 auto;
+    margin: 0 0 2em 0;
   }
   .epi_foreground {
-    max-width: 300px;
     padding: 20px;
+    max-width: 150px;
     background-color: rgba(0, 0, 0, 0.5);
-    text-align: center; /* Alinea el texto al centro */
   }
 
   .image_container {
     display: flex;
-    justify-content:center;
+    margin-left: 150px;
     align-items: center;
     height: 100vh;
   }
-  .barras{
-    width: 40vw; /* Ajusta el ancho como prefieras, porcentaje o valor absoluto */
-    max-width: 100%;
-  }
+
 
   /* Estilos para la sección de historia */
   .historia {
