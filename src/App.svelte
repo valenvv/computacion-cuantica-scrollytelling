@@ -346,6 +346,7 @@
         <Event {name} date={date} left={i % 2 === 0} eventID={name} description={description} data-aos="slide-left"/>
     {/each}
 </div>    
+
 <div class="aplicacion">
   <div class="contenido">
     <h2>Aplicaciones de la computación cuántica en el machine learning</h2>
@@ -355,8 +356,27 @@
     <p>
       En numerosos estudios e investigaciones se han evaluado diversas técnicas de codificación de datos cuánticos. En en este caso, nos centraremos en un estudio que analiza las principales técnicas de codificación: codificación en base, codificación en ángulo y codificación en amplitud. Estas técnicas se aplicaron a varios modelos de aprendizaje automático, incluyendo Regresión Logística, K-Nearest Neighbors (KNN), Support Vector Machines (SVM) y varios métodos de ensamblado como Random Forest, LightGBM, AdaBoost y CatBoost.
     </p>
+    
+    <div class="wrapper">
+      <div class="container">
+          <input type="radio" name="slide" id="c1" checked>
+          <label for="c1" class="tarjeta">
+            
+          </label>
+          <input type="radio" name="slide" id="c2" >
+          <label for="c2" class="tarjeta">
+          </label>
+          <input type="radio" name="slide" id="c3" >
+          <label for="c3" class="tarjeta">
+          </label>
+          <input type="radio" name="slide" id="c4" >
+          <label for="c4" class="tarjeta">
+          </label>
+      </div>
   </div>
-</div>
+  </div>
+  </div>
+  
 </main>
 
 <style>
@@ -684,35 +704,94 @@
     }
 
   /*Estilos para la sección de aplicación*/
-   
-  .aplicacion {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    text-align: center;
+  
+    .aplicacion {
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: auto;
+      text-align: center;
+    }
+
+    .aplicacion .contenido {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      max-width: 800px;
+    }
+
+    .aplicacion h2 {
+      font-size: 46px;
+      margin-bottom: 10px;
+      color: #ffffff;
+    }
+
+    .aplicacion p {
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 0;
+    }
+    /* intento de tarjetas */
+    
+    .wrapper {
+      box-sizing: border-box;
+      width: 80%;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
   }
 
-  .aplicacion .contenido {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    max-width: 800px;
+  .container {
+    
+      height: 400px;
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: center;
   }
 
-  .aplicacion h2 {
-    font-size: 46px;
-    margin-bottom: 10px;
-    color: #ffffff;
+  .tarjeta {
+      width: 80px;
+      border-radius: .75rem;
+      background-size: cover;
+      cursor: pointer;
+      overflow: hidden;
+      border-radius: 2rem;
+      margin: 0 10px;
+      display: flex;
+      align-items: flex-end;
+      transition: .6s cubic-bezier(.28,-0.03,0,.99);
+      box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
   }
 
-  .aplicacion p {
-    font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 0;
+  input {
+      display: none;
   }
 
+  input:checked + label {
+      width: 600px;
+
+  }
+
+  .tarjeta[for="c1"] {
+    /* background: linear-gradient(to bottom, #2A0D39, #711D76); */
+    background-image: url('public/images/deco1.png');
+    background-position: center; /* Centra la imagen */
+  }
+  .tarjeta[for="c2"] {
+    /* background: linear-gradient(to bottom, #20007A, #4E22CD); */
+    background-image: url('public/images/erroresCuanticos.png');
+    background-position: center;
+  }
+  .tarjeta[for="c3"] {
+    background: linear-gradient(to bottom, #2A0D39, #711D76);
+  }
+  .tarjeta[for="c4"] {
+    background: linear-gradient(to bottom, #20007A, #4E22CD);
+  }
 </style>
   
 
