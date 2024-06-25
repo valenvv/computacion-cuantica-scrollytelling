@@ -166,8 +166,11 @@
   // Call the function to change the image when the component is mounted
   onMount(() => {
     changeImage();
-  
+
+    
   });
+
+
 </script>
 
 <main>
@@ -370,7 +373,6 @@
       <div class="container">
           <input type="radio" name="slide" id="c1" checked>
           <label for="c1" class="tarjeta">
-            
           </label>
           <input type="radio" name="slide" id="c2" >
           <label for="c2" class="tarjeta">
@@ -813,10 +815,16 @@
   }
 
   input:checked + label {
-    width: 600px;
+    width: 700px;
     filter: grayscale(0) brightness(1); /* Reset grayscale and brightness for selected card */
   }
 
+  input:not(:checked) + .tarjeta[for="c1"],
+  input:not(:checked) + .tarjeta[for="c2"],
+  input:not(:checked) + .tarjeta[for="c3"],
+  input:not(:checked) + .tarjeta[for="c4"] {
+    background: linear-gradient(to bottom, #2A0D39, #711D76);
+  }
 
 
 
