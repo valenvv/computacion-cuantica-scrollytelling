@@ -209,6 +209,9 @@
 
   <!-- Nueva sección sobre entrelazamiento y superposicion -->
   <section class="Superpos-section section">
+    <div>
+      <img src="/images/superposition.gif" alt="superposition"  class="charts" />
+    </div>
     <div class="contenido">
       <h2 class = "subtitulo">Superposición</h2>
       <p>
@@ -404,12 +407,13 @@
   }
 
   .charts {
-    width: 50vw;
+    width: 40vw;
   }
   .section { /*si no usamos secciones borrar */
     scroll-snap-align: start;
     height: 100vh;
   }
+  
   .header {
     display: flex;
     justify-content: center;
