@@ -346,7 +346,6 @@
         <Event {name} date={date} left={i % 2 === 0} eventID={name} description={description} data-aos="slide-left"/>
     {/each}
 </div>    
-
 <div class="aplicacion">
   <div class="contenido">
     <h2>Aplicaciones de la computación cuántica en el machine learning</h2>
@@ -356,6 +355,16 @@
     <p>
       En numerosos estudios e investigaciones se han evaluado diversas técnicas de codificación de datos cuánticos. En en este caso, nos centraremos en un estudio que analiza las principales técnicas de codificación: codificación en base, codificación en ángulo y codificación en amplitud. Estas técnicas se aplicaron a varios modelos de aprendizaje automático, incluyendo Regresión Logística, K-Nearest Neighbors (KNN), Support Vector Machines (SVM) y varios métodos de ensamblado como Random Forest, LightGBM, AdaBoost y CatBoost.
     </p>
+    
+  </div>
+
+<div class="desafios">
+  <div class="contenido">
+    <h2>Desafíos actuales y futuro de la computación cuántica</h2>
+    <p>
+      La computación cuántica enfrenta desafíos técnicos significativos que deben ser superados para alcanzar su pleno potencial. 
+    </p>
+    
     
     <div class="wrapper">
       <div class="container">
@@ -703,9 +712,41 @@
         }
     }
 
-  /*Estilos para la sección de aplicación*/
+  /*Estilos para la sección de desafios*/
   
-    .aplicacion {
+  .aplicacion {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  text-align: center;
+  }
+
+  .aplicacion .contenido {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 800px;
+  }
+
+  .aplicacion h2 {
+    font-size: 46px;
+    margin-bottom: 10px;
+    color: #ffffff;
+  }
+
+  .aplicacion p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 0;
+  }
+
+  /*Estilos para la sección de desafios*/
+  
+    .desafios {
 
       display: flex;
       flex-direction: column;
@@ -715,7 +756,7 @@
       text-align: center;
     }
 
-    .aplicacion .contenido {
+    .desafios .contenido {
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -723,13 +764,13 @@
       max-width: 800px;
     }
 
-    .aplicacion h2 {
+    .desafios h2 {
       font-size: 46px;
       margin-bottom: 10px;
-      color: #ffffff;
+      color: #BB8DF5;
     }
 
-    .aplicacion p {
+    .desafios p {
       font-size: 18px;
       line-height: 1.6;
       margin-bottom: 0;
@@ -764,26 +805,30 @@
       display: flex;
       align-items: flex-end;
       transition: .6s cubic-bezier(.28,-0.03,0,.99);
-      box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
+      filter: grayscale(1) brightness(0.5); /* Apply grayscale and reduce brightness */
   }
 
   input {
-      display: none;
+    display: none;
   }
 
   input:checked + label {
-      width: 600px;
-
+    width: 600px;
+    filter: grayscale(0) brightness(1); /* Reset grayscale and brightness for selected card */
   }
 
+
+
+
   .tarjeta[for="c1"] {
+    
     /* background: linear-gradient(to bottom, #2A0D39, #711D76); */
-    background-image: url('public/images/deco1.png');
+    background-image: url('public/images/deco2.png');
     background-position: center; /* Centra la imagen */
   }
   .tarjeta[for="c2"] {
     /* background: linear-gradient(to bottom, #20007A, #4E22CD); */
-    background-image: url('public/images/erroresCuanticos.png');
+    background-image: url('public/images/erroresCuanticos2.png');
     background-position: center;
   }
   .tarjeta[for="c3"] {
@@ -792,6 +837,7 @@
   .tarjeta[for="c4"] {
     background: linear-gradient(to bottom, #20007A, #4E22CD);
   }
+     
 </style>
   
 
