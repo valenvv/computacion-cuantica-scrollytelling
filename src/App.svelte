@@ -277,7 +277,9 @@
 
               Estos qubits se encuentran en materiales semiconductores, donde los electrones están atrapados en un lugar pequeño. Para controlar estos qubits, se usan microondas o campos magnéticos.
               
-              Las ventajas incluyen que pueden usar la tecnología de los semiconductores que ya existe y que pueden mantener su estado cuántico por mucho tiempo. Sin embargo, es difícil controlar el entorno del espín y reducir el ruido.</p>
+              Las ventajas incluyen que pueden usar la tecnología de los semiconductores que ya existe y que pueden mantener su estado cuántico por mucho tiempo. Sin embargo, es difícil controlar el entorno del espín y reducir el ruido.
+            </p>
+            <img src="public\images\Spin Semiconductor.png" alt="Spin Semiconductor" class="spin-semiconductor">
           </div>
       </li>
       <li class="card" style="--index: 4;">
