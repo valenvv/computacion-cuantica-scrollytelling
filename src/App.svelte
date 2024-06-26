@@ -214,7 +214,7 @@
     </div>
     <div class="contenido">
       <h2 class = "subtitulo">Superposición</h2>
-      <p>
+      <p class = "texto">
         las partículas cuánticas son una combinación de todos los estados
         posibles. Fluctúan hasta que se observan y se miden. Una forma de
         ilustrar la diferencia entre la posición binaria y la superposición es
@@ -485,40 +485,30 @@
   /* Estilos para la sección de Superposición */
   .Superpos-section {
     /* background-color: #7DEFE0; */
-    position: relative;
+    pposition: relative;
     display: flex;
-    justify-content: center;
+    flex-direction: row;
     align-items: center;
     padding: 20px;
+    gap: 20px;
+    max-width: 80%;
+    margin: 0 auto;
   }
 
   .Superpos-section .contenido {
-    display: grid;
-    position: relative;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
     margin-bottom: 20px;
-    max-width: 80%;
-    margin: 0 auto;
-    padding: 20px;
   }
-
-  .Superpos-section h2 {
-    font-size: 36px;
-    margin-bottom: 10px;
-    position: relative;
-    transform: translate(93%, -240%);
+  
+  .Superpos-section h2{
+    transform: translateX(-40%); 
+    /* cambiar cuando sepas como hacer que este tirado para la izq como Entrelazamiento */
   }
-
-  .Superpos-section p {
-    font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 20px;
-    position: relative;
-    transform: translate(-10%, 10%);
-    text-align: justify;
-  }
+ 
+ 
 
   /* Estilos para la sección de Entrelazamiento */
   .entrelazamiento-section {
@@ -786,7 +776,7 @@
     .wrapper {
       box-sizing: border-box;
       width: 80%;
-      height: 100vh;
+      height: 90vh;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -811,7 +801,7 @@
       display: flex;
       align-items: flex-end;
       transition: .6s cubic-bezier(.28,-0.03,0,.99);
-      filter: grayscale(1) brightness(0.5); /* Apply grayscale and reduce brightness */
+      /* filter: grayscale(1) brightness(0.5);  */
   }
 
   input {
@@ -820,14 +810,15 @@
 
   input:checked + label {
     width: 700px;
-    filter: grayscale(0) brightness(1); /* Reset grayscale and brightness for selected card */
+    /* filter: grayscale(0) brightness(1); */
   }
 
   input:not(:checked) + .tarjeta[for="c1"],
   input:not(:checked) + .tarjeta[for="c2"],
   input:not(:checked) + .tarjeta[for="c3"],
   input:not(:checked) + .tarjeta[for="c4"] {
-    background: linear-gradient(to bottom, #2A0D39, #711D76);
+    /* background: linear-gradient(to bottom, #20007A, #461DBB); */
+    background: linear-gradient(to bottom, #20007A, #5439ff);
   }
 
 
@@ -836,7 +827,7 @@
     
     /* background: linear-gradient(to bottom, #2A0D39, #711D76); */
     background-image: url('public/images/deco2.png');
-    background-position: center; /* Centra la imagen */
+    background-position: center;
   }
   .tarjeta[for="c2"] {
     /* background: linear-gradient(to bottom, #20007A, #4E22CD); */
@@ -844,8 +835,10 @@
     background-position: center;
   }
   .tarjeta[for="c3"] {
-    background: linear-gradient(to bottom, #2A0D39, #711D76);
-  }
+    background-image: url('public/images/Escalabilidad.png');
+    background-position: center; 
+
+   }
   .tarjeta[for="c4"] {
     background: linear-gradient(to bottom, #20007A, #4E22CD);
   }
