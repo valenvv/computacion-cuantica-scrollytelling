@@ -36,12 +36,12 @@
   let graficoApp = {
     0: "KNN.png",
     1: "SVM.png",
-    2: "LogisticReg.png",
+    2: "Logistic Reg.png",
     3: "AdaBoost.png",
     4: "CatBoost.png",
     5: "AdaBoost.png",
     6: "LightGBM.png",
-    7: "RandonForest.png"
+    7: "RandomForest.png"
   }
 
 
@@ -201,7 +201,7 @@
     <Stars />
   </div>
 
-  <div class="contenido section">
+  <div class="introduccion section">
     <p>
       La computación cuántica es un campo de estudio que aplica los principios
       de la mecánica cuántica, una rama de la física que describe el
@@ -210,13 +210,10 @@
       uno de dos estados (0 o 1), la computación cuántica utiliza bits
       cuánticos, o qubits, que pueden existir en múltiples estados a la vez.
     </p>
-    <p>
-      <img src="public/images/quantumComputer.jpg" alt="" />
-    </p>
-  </div>
-
-  <div class="contenido section">
-    <p>
+    
+    <img src="public/images/quantumComputer.png" alt="quantumComputer" />
+    
+    <!-- <p>
       Los Qubits permiten a los ordenadores cuánticos procesar una gran cantidad
       de información simultáneamente. Esto tiene el potencial de resolver
       problemas que son inabordables para los ordenadores clásicos, abriendo
@@ -225,8 +222,9 @@
       molecular, entre otros. Sin embargo, la computación cuántica todavía está
       en sus primeras etapas de desarrollo y presenta muchos desafíos técnicos y
       teóricos.
-    </p>
+    </p> -->
   </div>
+
 
   <!-- Nueva sección sobre entrelazamiento y superposicion -->
   <section class="Superpos-section section">
@@ -384,8 +382,7 @@
     <p>
       En numerosos estudios e investigaciones se han evaluado diversas técnicas de codificación de datos cuánticos. En en este caso, nos centraremos en un estudio que analiza las principales técnicas de codificación: codificación en base, codificación en ángulo y codificación en amplitud. Estas técnicas se aplicaron a varios modelos de aprendizaje automático, incluyendo Regresión Logística, K-Nearest Neighbors (KNN), Support Vector Machines (SVM) y varios métodos de ensamblado como Random Forest, LightGBM, AdaBoost y CatBoost.
     </p>
-    
-  </div>
+    <iframe title="[ Insert title here ]" aria-label="Grouped Columns" id="datawrapper-chart-7wlDE" src="https://datawrapper.dwcdn.net/7wlDE/7/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="369" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();</script>  </div>
   <div class="graficoApp">
     <Scroller
       top={top3}
@@ -495,8 +492,13 @@
     width: 40vw;
   }
   .section { /*si no usamos secciones borrar */
-    scroll-snap-align: start;
-    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 20px;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 80%;
   }
   
   .header {
@@ -539,19 +541,39 @@
     color: transparent;
     animation: gradientShift 4s cubic-bezier(0.42, 0, 0.58, 1) infinite;
     z-index: 1;
-    margin: 0;
+    margin: 250px 0;
   }
 
   /* Introducción */
-  .contenido {
+  .introduccion {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    gap: 20px;
-    margin: 0 auto;
+    gap: 50px;
+    margin: 40px auto;
     padding: 20px;
     max-width: 80%;
 }
+
+  /* Estilo para contenido de texto */
+  .introduccion p {
+      text-align: justify;
+      margin: 0;
+  }
+
+  /* Imagen dentro de la introducción */
+  .introduccion img {
+      max-width: 100%;
+      width: 600px;
+      margin: 0 auto;
+      border-radius: 50px;
+  }
+
+  .contenido {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 
 .contenido p {
     display: flex;
@@ -567,52 +589,32 @@
     z-index: 1;
     margin: 0 auto;
 }
-  /* Estilos para la sección de Superposición */
-  .Superpos-section {
-    /* background-color: #7DEFE0; */
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 20px;
-    gap: 20px;
-    max-width: 80%;
-    margin: 0 auto;
-  }
 
+/* Imagen dentro de la grilla */
+.section img {
+    max-width: 100%;
+    width: 600px;
+    margin: 0 auto;
+}
+
+.Superpos-section img{
+  max-width: 70%;
+  width:400px;
+}
+
+/* Estilo para los párrafos */
+.section p {
+    text-align: justify;
+}
+ /* Estilos específicos para la sección de Superposición */
   .Superpos-section .contenido {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 50%;
-    margin-bottom: 20px;
-  }
-  
-  .Superpos-section h2{
-    transform: translateX(-40%); 
-    /* cambiar cuando sepas como hacer que este tirado para la izq como Entrelazamiento */
-  }
- 
- 
-
-  /* Estilos para la sección de Entrelazamiento */
-  .entrelazamiento-section {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 20px;
-    gap: 20px;
-    max-width: 80%;
-    margin: 0 auto;
+    margin-bottom: 0;
   }
 
-  .contexto-entrelazamiento {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 50%;
-    margin-bottom: 20px;
+
+  /* Estilos específicos para la sección de Entrelazamiento */
+  .entrelazamiento-section .contexto-entrelazamiento {
+    margin-bottom: 0;
   }
 
   /* Estilos para la sección de Qubits */
@@ -798,7 +800,11 @@
     }
 
   /*Estilos para la sección de desafios*/
-  
+  /*Estilos Datawrapper*/
+
+  #datawrapper-chart-7wlDE{
+    margin: 50px 0;
+  }
   .aplicacion {
 
   display: flex;
