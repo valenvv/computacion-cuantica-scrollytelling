@@ -755,6 +755,7 @@
     align-items: center;
     height: 60vh;
     text-align: center;
+    margin-top: 200px;
     
   }
 
@@ -808,7 +809,7 @@
     margin: 50px 0;
   }
   .aplicacion {
-  margin-top: 250px; /*Adapt fondo*/
+  margin-top: 200px; /*Adapt fondo*/
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -840,7 +841,7 @@
   /*Estilos para la sección de desafios*/
   
     .desafios {
-      margin-top: 160px; /*Adapt fondo*/
+      margin-top: 360px; /*Adapt fondo*/
       display: flex;
       flex-direction: column;
       justify-content: center;
