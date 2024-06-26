@@ -624,6 +624,7 @@
     align-items: center;
     height: 70vh;
     text-align: center;
+    margin-top: 90px; /*adapt fondo*/
   }
 
   .qubits .contenido {
@@ -752,8 +753,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 60vh;
     text-align: center;
+    
   }
 
   .historia .contenido {
@@ -806,7 +808,7 @@
     margin: 50px 0;
   }
   .aplicacion {
-
+  margin-top: 250px; /*Adapt fondo*/
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -838,7 +840,7 @@
   /*Estilos para la sección de desafios*/
   
     .desafios {
-
+      margin-top: 160px; /*Adapt fondo*/
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -938,6 +940,12 @@
     background: linear-gradient(to bottom, #20007A, #4E22CD);
   }
      
+  main{
+    background-image: url("images/fondo3.png");
+    background-size: 100vw;
+    margin: 0 0;
+    z-index: 2;
+  }
 </style>
   
 
