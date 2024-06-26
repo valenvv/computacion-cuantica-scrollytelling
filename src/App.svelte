@@ -23,6 +23,27 @@
     3: "bucleSuperconductorBarras.png",
   }
 
+  /* Variables para el scroller */
+  let count3
+  let index3
+  let offset3
+  let progress3
+  let top3 = 0.1
+  let threshold3 = 0.5
+  let bottom3 = 0.9
+
+  /* barras graf */
+  let graficoApp = {
+    0: "KNN.png",
+    1: "SVM.png",
+    2: "LogisticReg.png",
+    3: "AdaBoost.png",
+    4: "CatBoost.png",
+    5: "AdaBoost.png",
+    6: "LightGBM.png",
+    7: "RandonForest.png"
+  }
+
 
   const events = [
   {
@@ -365,6 +386,67 @@
     </p>
     
   </div>
+  <div class="graficoApp">
+    <Scroller
+      top={top3}
+      threshold={threshold3}
+      bottom={bottom3}
+      bind:count={count3}
+      bind:index={index3}
+      bind:offset={offset3}
+      bind:progress={progress3}
+    >
+      <div slot="background" class="image_container">
+        <img src="/images/{graficoApp[index3]}" alt="chart {index3}" class="graficoApp" width="50%" />
+      </div>
+      <div slot="foreground" class="foreground_container">
+        <section class="step_foreground">
+          <div class="epi_foreground">
+            <h3>Sección {index3 + 1}</h3>
+            <p>Gráfico1</p>
+          </div>
+        </section>
+        <section class="step_foreground">
+          <div class="epi_foreground">
+            <h3>Sección {index3 + 1}</h3>
+            <p>Gráfico2</p>
+          </div>
+        </section>
+        <section class="step_foreground">
+          <div class="epi_foreground">
+            <h3>Sección {index3 + 1}</h3>
+            <p>Gráfico3</p>
+          </div>
+        </section>
+        <section class="step_foreground">
+          <div class="epi_foreground">
+            <h3>Sección {index3 + 1}</h3>
+            <p>Gráfico4</p>
+          </div>
+        </section>
+        <section class="step_foreground">
+          <div class="epi_foreground">
+            <h3>Sección {index3 + 1}</h3>
+            <p>Gráfico5</p>
+          </div>
+        </section>
+        <section class="step_foreground">
+          <div class="epi_foreground">
+            <h3>Sección {index3 + 1}</h3>
+            <p>Gráfico6</p>
+          </div>
+        </section>
+        <section class="step_foreground">
+          <div class="epi_foreground">
+            <h3>Sección {index3 + 1}</h3>
+            <p>Gráfico7</p>
+          </div>
+        </section>
+        
+      </div>
+    </Scroller>
+  </div>
+  
 
 <div class="desafios">
   <div class="contenido">
@@ -392,6 +474,7 @@
   </div>
   </div>
   </div>
+
   
 </main>
 
@@ -487,7 +570,7 @@
   /* Estilos para la sección de Superposición */
   .Superpos-section {
     /* background-color: #7DEFE0; */
-    pposition: relative;
+    position: relative;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -627,8 +710,12 @@
     color:#CB9BFF;
   }
 
-   /* Estilos para el scroller */
+ 
   /* Estilos para el scroller */
+  .graficoApp {
+  position: relative;
+  width: 80%;
+}
   .foreground_container {
     pointer-events: none;
     padding-left: 50%;
@@ -645,6 +732,7 @@
     margin: 0 0 2em 0;
   }
   .epi_foreground {
+    
     padding: 20px;
     max-width: 150px;
     background-color: rgba(0, 0, 0, 0.5);
@@ -656,8 +744,7 @@
     align-items: center;
     height: 100vh;
   }
-
-
+ 
   /* Estilos para la sección de historia */
   .historia {
     display: flex;
