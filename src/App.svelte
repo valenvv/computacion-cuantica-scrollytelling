@@ -50,7 +50,7 @@
   {
     name: "La Hipótesis Cuántica",
     date: "1900",
-    description: "Max Planck (físico teórico alemán), introdujo el concepto de niveles de energía cuantificada para explicar el fenómeno de la radiación de cuerpo negro. Propuso que la energía no se emite de manera continua, sino en paquetes discretos llamados cuantos. Esto marcó el comienzo de una nueva era en la física y marcó las bases para el desarrollo de la mecánica cuántica.",
+    description: "Planck propuso que la energía se emite en paquetes discretos llamados cuantos, lo que explicó la radiación de cuerpo negro y marcó el inicio de la mecánica cuántica.",
     author: "Max Planck",
     left: true,
     eventID: "evento1"
@@ -58,7 +58,7 @@
   {
     name: "El Efecto Fotoeléctrico",
     date: "1905",
-    description: "Albert Einstein publicó un estudio sobre el efecto fotoeléctrico, en el cual explicó que la luz está compuesta por partículas denominadas fotones. Cada uno de estos fotones porta una cantidad de energía discreta, la cual es proporcional a su frecuencia. Su análisis reforzó la hipótesis cuántica propuesta por Planck, y contribuyó significativamente a la creciente comprensión del comportamiento de la luz, similar al de las partículas.",
+    description: "Einstein explicó el efecto fotoeléctrico diciendo que la luz está hecha de fotones, que son partículas con energía proporcional a su frecuencia, apoyando así la teoría cuántica de Planck.",
     author: "Albert Einstein",
     left: false,
     eventID: "evento2"
@@ -66,7 +66,7 @@
   {
     name: "El Modelo Atómico de Bohr",
     date: "1913",
-    description: "Desarrollo del modelo atómico de Bohr, en el cual se propuso que los electrones orbitan el núcleo en niveles de energía cuantizados. Este modelo proporcionó una comprensión más profunda de la estructura atómica y la naturaleza cuantizada de la energía. También introdujo el concepto de saltos cuánticos, donde los electrones podrían moverse entre niveles de energía al absorber o emitir fotones, demostrando aún más la importancia de la cuantización en los sistemas atómicos.",
+    description:"Bohr propuso que los electrones orbitan el núcleo en niveles de energía específicos y pueden saltar entre estos niveles al absorber o emitir luz.",
     author: "Niels Bohr",
     left: true,
     eventID: "evento3"
@@ -74,7 +74,7 @@
   {
     name: "El Principio de Incertidumbre",
     date: "1927",
-    description: "Werner Heisenberg, un físico alemán, formuló el principio de incertidumbre, un concepto fundamental en la mecánica cuántica. El principio establece que es imposible conocer simultáneamente tanto la posición como el momento de una partícula con perfecta precisión. Esto destacó las limitaciones inherentes en la medición de sistemas cuánticos.",
+    description: "Heisenberg formuló el principio de incertidumbre, que dice que es imposible medir con exactitud tanto la posición como la velocidad de una partícula al mismo tiempo.",
     author: "Werner Heisenberg",
     left: false,
     eventID: "evento4"
@@ -82,7 +82,7 @@
   {
     name: "Paradoja de Einstein-Podolsky-Rosen (EPR)",
     date: "1935",
-    description: "Artículo introduciendo la paradoja EPR, que cuestionaba la completitud de la mecánica cuántica debido al fenómeno del entrelazamiento. El entrelazamiento implica que las propiedades de dos o más partículas pueden estar correlacionadas de tal manera que el estado de una partícula afecta instantáneamente el estado de la otra, independientemente de la distancia entre ellas.",
+    description: "La paradoja EPR mostró que, por el entrelazamiento, el cambio en el estado de una partícula afecta instantáneamente a otra, sin importar la distancia entre ellas, cuestionando así la mecánica cuántica.",
     author: "Albert Einstein Boris Podolsky y Nathan Rosen",
     left: true,
     eventID: "evento5"
@@ -90,31 +90,15 @@
   {
     name: "Desigualdades de Bell",
     date: "1964",
-    description: "El físico John Bell formuló las desigualdades de Bell, que proporcionaron una forma de probar experimentalmente la validez de la paradoja EPR. La violación de las desigualdades de Bell en experimentos posteriores confirmó la existencia del entrelazamiento, un recurso clave para la computación cuántica.",
+    description: "John Bell desarrolló pruebas que mostraron cómo las partículas entrelazadas están conectadas de manera especial comprobando la existencia del entrelazamiento, lo que es esencial para la tecnología cuántica.",
     author: "John Bell",
     left: false,
     eventID: "evento6"
   },
   {
-    name: "Primera Conferencia sobre Física y Computación (PhysComp)",
-    date: "1980",
-    description: "Este encuentro interdisciplinario facilitó el intercambio de ideas y la exploración de enfoques novedosos para la computación cuántica, lo que finalmente llevó al surgimiento del campo tal como lo conocemos hoy. La conferencia PhysComp demostró el creciente interés y reconocimiento del potencial impacto de la mecánica cuántica en la computación y el procesamiento de información.",
-    author: "",
-    left: true,
-    eventID: "evento7"
-  },
-  {
-    name: "Propuesta de Richard Feynman sobre las Computadoras Cuánticas",
-    date: "1981",
-    description: "El físico Richard Feynman dio una conferencia seminal en la Primera Conferencia sobre la Física de la Computación, proponiendo que una computadora que opera según los principios cuánticos podría simular eficientemente sistemas cuánticos. La perspicacia de Feynman fue crucial ya que destacó las limitaciones de las computadoras clásicas en la simulación de fenómenos cuánticos.",
-    author: "Richard Feynman",
-    left: false,
-    eventID: "evento8"
-  },
-  {
     name: "Las Máquinas de Turing Cuánticas",
     date: "1982",
-    description: "Artículo describiendo un modelo mecánico cuántico de una máquina de Turing. Este modelo, marco las bases para los modelos de computación cuántica al demostrar que los principios de la mecánica cuántica podían aplicarse a los fundamentos teóricos de la computación. Este trabajo mostró que los sistemas cuánticos podrían utilizarse para realizar cálculos de una manera análoga a las máquinas de Turing clásicas.",
+    description: "El artículo introdujo un modelo cuántico de máquina de Turing, demostrando que los sistemas cuánticos pueden realizar cálculos como las máquinas de Turing clásicas.",
     author: "Paul Benioff",
     left: true,
     eventID: "evento9"
@@ -122,7 +106,7 @@
   {
     name: "Computadora Cuántica Universal",
     date: "1985",
-    description: "Artículo que introdujo el concepto de una computadora cuántica universal. Deutsch se basó en las ideas de Feynman y Benioff, y proporcionó un marco más concreto para entender cómo podrían operar las computadoras cuánticas. Este trabajo marco las bases para el desarrollo de algoritmos cuánticos.",
+    description: " Introdujo la idea de una computadora cuántica universal para explicar cómo podrían funcionar estas computadoras. Esto fue fundamental para el desarrollo de algoritmos cuánticos.",
     author: "David Deutsch",
     left: false,
     eventID: "evento10"
@@ -130,33 +114,25 @@
   {
     name: "Algoritmo de Shor",
     date: "1994",
-    description: "Es el primer algoritmo cuántico, conocido ahora como el algoritmo de Shor. Este algoritmo utiliza los principios de la mecánica cuántica para factorizar eficientemente números grandes, una tarea que tomaría un tiempo exponencialmente mayor en computadoras clásicas. La habilidad de factorizar números grandes tiene implicaciones significativas para la criptografía, ya que muchos esquemas de encriptación, como RSA, dependen de la dificultad de este problema para su seguridad. Demostró el potencial poder de la computación cuántica, resaltando su habilidad para resolver problemas que previamente se consideraban intratables para las computadoras clásicas.",
+    description: "Es el primer algoritmo diseñado para computadoras cuánticas. Puede factorizar números grandes de manera rápida, algo difícil para las computadoras tradicionales. Esto es importante para la seguridad informatica, ya que muchos métodos de encriptación podrían volverse vulnerables.",
     author: "Peter Shor",
     left: true,
     eventID: "evento11"
   },
   {
-    name: "Algoritmo de Grover",
-    date: "1996",
-    description: "Algoritmo cuántico que busca eficientemente en bases de datos no ordenadas. Puede buscar en una base de datos de N elementos en aproximadamente √N pasos, lo cual es mucho más rápido que los algoritmos clásicos que requieren alrededor de N pasos. Aunque no es tan rápido como el algoritmo de Shor, el algoritmo de Grover muestra cómo la computación cuántica puede ser superior a la computación clásica en ciertas tareas.",
-    author: "Lov Grover",
-    left: false,
-    eventID: "evento12"
-  },
-  {
     name: "Recocido Cuántico",
     date: "2011",
-    description: "Afirmaron haber construido la primera computadora cuántica comercialmente disponible, la D-Wave One. Este sistema se basaba en el recocido cuántico, un enfoque especializado de la computación cuántica que se centra en resolver problemas de optimización. Sin embargo, la aplicabilidad práctica y la verdadera naturaleza cuántica de los sistemas de D-Wave fueron objeto de debate entre los investigadores, con algunos argumentando que los sistemas proporcionaban solo una aceleración limitada en comparación con las computadoras clásicas.",
+    description: "Afirmaron haber creado la primera computadora cuántica comercial, la D-Wave One, usando el recocido cuántico para resolver problemas de optimización. Hubo debate sobre si realmente ofrecía una ventaja significativa sobre las computadoras clásicas.",
     author: "Compañía canadiense D-Wave Systems",
-    left: true,
+    left: false,
     eventID: "evento13"
   },
   {
     name: "Supremacía Cuántica de Google",
     date: "2019",
-    description: "La computadora cuántica de Google resolvió un problema específico en 200 segundos que llevaría aproximadamente 10,000 años a una supercomputadora clásica. Este logro marcó la primera vez que una computadora cuántica superó a las computadoras clásicas en una tarea computacional bien definida, proporcionando una prueba de concepto para el potencial poder de la computación cuántica.",
+    description: "La computadora cuántica de Google resolvió un problema en solo 200 segundos que una supercomputadora clásica necesitaría unos 10,000 años para resolver. Esto muestra que las computadoras cuánticas pueden ser mucho más rápidas en ciertas tareas que las computadoras tradicionales.",
     author: "Google",
-    left: false,
+    left: true,
     eventID: "evento14"
   }
 ];
