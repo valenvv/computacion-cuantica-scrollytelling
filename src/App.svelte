@@ -376,26 +376,35 @@
       <div slot="foreground" class="foreground_container">
         <section class="step_foreground">
           <div class="epi_foreground">
-            <h3>Sección {index3 + 1}</h3>
-            <p>Gráfico1</p>
+            <h3>Presentación</h3>
+            <p> Este gráfico presenta una comparación entre distintos modelos en sus versiones clásicas y cuánticas. El objetivo es visualizar las diferencias en su desempeño bajo las mismas condiciones experimentales. 
+              <p>Rosa: modelos clásicos. Naranja: modelos cuánticos.</p>
+              <p>Modelo actual: KNN1</p>
+            
           </div>
         </section>
         <section class="step_foreground">
           <div class="epi_foreground">
-            <h3>Sección {index3 + 1}</h3>
-            <p>Gráfico2</p>
+            <h3>¿Qué significan los modelos?</h3>
+            <p>Cada uno de estos modelos/algoritmos es una herramienta matemática que aprende patrones a partir de datos de entrenamiento. Una vez entrenados, estos modelos pueden hacer predicciones o tomar decisiones sobre nuevos datos basándose en los patrones que han aprendido.</p>
           </div>
         </section>
         <section class="step_foreground">
           <div class="epi_foreground">
-            <h3>Sección {index3 + 1}</h3>
-            <p>Gráfico3</p>
+            <h3>¿Qué medimos?</h3>
+            <p>precisión</p>
+            <p>
+              Medimos el rendimiento de los dos tipos de modelos durante el proceso de entrenamiento.
+              La precisión nos indica qué tan bien predice el modelo. Es una medida de la exactitud de las predicciones hechas por el modelo en comparación con los valores reales.
+            </p>
           </div>
         </section>
         <section class="step_foreground">
           <div class="epi_foreground">
-            <h3>Sección {index3 + 1}</h3>
-            <p>Gráfico4</p>
+            <h3>¿Qué medimos?</h3>
+            <p>tiempo de cómputo</p>
+            <p>El tiempo de cómputo indica cuánto tiempo tarda el modelo en completar el proceso de entrenamiento. Esto es importante porque nos ayuda a evaluar la eficiencia del modelo en términos de recursos y tiempo necesarios para entrenarlo. Un menor tiempo de cómputo puede ser preferible si necesitamos resultados rápidos o si estamos trabajando con recursos limitados.
+          </p>
           </div>
         </section>
         <section class="step_foreground">
@@ -412,8 +421,9 @@
         </section>
         <section class="step_foreground">
           <div class="epi_foreground">
-            <h3>Sección {index3 + 1}</h3>
-            <p>Gráfico7</p>
+            <h3>Conclusiones</h3>
+            <p>Los modelos cuánticos, en general, muestran una mayor precisión que los modelos clásicos, lo que demuestra el potencial de la computación cuántica para mejorar el rendimiento de los modelos de aprendizaje automático.</p>
+            <p>Sin embargo, esta mejora en la precisión viene con un aumento en el tiempo de ejecución, lo cual es un trade-off que debe considerarse dependiendo del caso de uso específico.</p>
           </div>
         </section>
         
@@ -726,6 +736,7 @@
   }
 
   .step_foreground {
+    
     display: flex;
     justify-content: end;
     align-items: center;
@@ -736,10 +747,10 @@
     margin: 0 0 2em 0;
   }
   .epi_foreground {
-    
+    transform: translateX(30%);
     padding: 20px;
-    max-width: 150px;
-    background-color: rgba(0, 0, 0, 0.5);
+    max-width: 400px;
+    background-color: rgba(125, 125, 125, 0.5);
   }
 
   .image_container {
