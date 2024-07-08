@@ -790,11 +790,12 @@
         content: '';
         position: absolute;
         width: 3px;
-        background-color: #D9D9D9;
-        top: 0;
-        bottom: 0;
+        background-color: #3D46F2;
+        top: 4%;
+        bottom:4%;
         left: 50%;
         margin-left: -3px;
+        z-index: 8;
     }
 
     @media screen and (max-width: 600px) {
