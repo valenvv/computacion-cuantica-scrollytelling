@@ -66,21 +66,27 @@
     .container::after {
       content: '';
       position: absolute;
-      width: 20px;
-      height: 20px;
+      width: 50px;
+      height: 50px;
       background-color: rgb(255, 255, 255);
       border-radius: 50%;
       top: 50%;
-      transform: translateY(-50%);
+      position: center;
+      /* background-color: #5BADD5; las bolitas de shor y google deberian ser de este color */
+      background-color: #ffffff;
       text-align: justify;
+      z-index: 10;
     }
   
     .left::after {
       left: 530px;
+      transform: translate(25%, -50%);
+    
     }
-  
+    
     .right::after {
       right: 530px;
+      transform: translate(-35%, -50%);
     }
   </style>
   
