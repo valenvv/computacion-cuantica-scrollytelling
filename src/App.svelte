@@ -15,6 +15,7 @@
   let threshold2 = 0.5
   let bottom2 = 0.9
 
+
   /* barras graf */
   let barras = {
     0: "ionAtrapadoBarras.png",
@@ -34,14 +35,14 @@
 
   /* barras graf */
   let graficoApp = {
-    0: "KNN.png",
-    1: "SVM.png",
-    2: "Logistic Reg.png",
-    3: "AdaBoost.png",
-    4: "CatBoost.png",
-    5: "AdaBoost.png",
-    6: "LightGBM.png",
-    7: "RandomForest.png"
+    0: "KNN1.png",
+    1: "SVM1.png",
+    2: "Logistic Reg1.png",
+    3: "AdaBoost1.png",
+    4: "CatBoost1.png",
+    5: "AdaBoost1.png",
+    6: "LightGBM1.png",
+    7: "RandomForest1.png"
   }
 
 
@@ -583,7 +584,7 @@
     z-index: 1;
 }
 
-.contenido img {
+.contenido img { 
     max-width: 100%;
     width: 600px;
     z-index: 1;
