@@ -234,13 +234,9 @@
     <div class="contenido">
       <h2 class = "subtitulo">Superposición</h2>
       <p class = "texto">
-        las partículas cuánticas son una combinación de todos los estados
-        posibles. Fluctúan hasta que se observan y se miden. Una forma de
-        ilustrar la diferencia entre la posición binaria y la superposición es
-        imaginar una moneda. Los bits clásicos se miden "volteando la moneda" y
-        obteniendo cara o cruz. Sin embargo, si fuese posible mirar una moneda y
-        ver las dos caras a la vez, y todos los estados entre medias, la moneda
-        estaría en una superposición.
+        En la superposición, los qubits pueden representar una combinación de todos los posibles estados al mismo tiempo. 
+        Es como si una moneda estuviera en un estado de "cara y cruz simultáneamente", junto con todos los estados intermedios posibles. 
+        Esto contrasta con la computación clásica, donde se obtiene un resultado definido al medir (como cara o cruz) al "voltear la moneda".
       </p>
     </div>
   </section>
@@ -249,10 +245,9 @@
     <div class="contexto-entrelazamiento">
       <h2 class = "subtitulo">Entrelazamiento</h2>
       <p class = "texto">
-        El entrelazamiento cuántico es un fenómeno en el que dos qubits (o dos o
-        más partículas cuánticas cualesquiera) se entrelazan de tal forma que el
-        estado de una partícula no puede describirse independientemente del
-        estado de la otra, sin importar la distancia que las separe.
+        El entrelazamiento cuántico describe cómo dos qubits pueden estar tan interconectados que el estado de uno no puede describirse
+        independientemente del estado del otro, sin importar la distancia que los separe. Este fenómeno es fundamental en la computación cuántica,
+        permitiendo conexiones instantáneas que desafían las limitaciones de la física clásica.
       </p>
     </div>
     <div>
@@ -262,9 +257,12 @@
 
   <div class="qubits ">
     <div class="contenido">
-      <h2>Qubits</h2>
+      <h2>Qubit: La unidad básica de información</h2>
       <p>
-        Los qubits son la unidad básica de información en la computación cuántica. A diferencia de los bits clásicos, los qubits pueden representar tanto 0 como 1 al mismo tiempo, gracias a la superposición cuántica. Este comportamiento permite a los ordenadores cuánticos procesar una gran cantidad de información simultáneamente.
+        Los qubits son la unidad básica de información en la computación cuántica. A diferencia de los bits clásicos, 
+        los qubits pueden representar tanto 0 como 1 al mismo tiempo, gracias a la superposición cuántica. 
+        A continuación, se describen los diferentes tipos de qubits utilizados en esta disciplina:
+        
       </p>
     </div>
   </div>
@@ -274,9 +272,7 @@
       <li class="card" style="--index: 1;">
           <div class="card__content">
             <h2 class="card_title">Ion Atrapado</h2>
-            <p>
-              Son partículas atómicas cargadas que se confinan y manipulan utilizando campos electromagnéticos. Destacan por su mayor tiempo de coherencia y una temperatura de operación más alta. No obstante, su principal desventaja radica en el tiempo necesario para manipular el estado de los qubits. Empresas como Honeywell y IonQ emplean este tipo de qubits.
-            </p>
+            <p> Son partículas atómicas cargadas que se manipulan usando campos electromagnéticos. Destacan por su estabilidad y alta temperatura de operación. Sin embargo, su desventaja principal es el tiempo necesario para manipular sus estados. </p>
             <img src="public\images\trapped Ion.png" alt="Ion atrapado" class="ion-atrapado">
           </div>
       </li>
@@ -284,7 +280,7 @@
           <div class="card__content">
             <h2 class="card_title">Átomo Neutro</h2>
             <p>
-              Se codifican en átomos individuales que se enfrían y atrapan en un potencial óptico generado por láseres cruzados. Estos átomos pueden ser manipulados y controlados mediante pulsos de láser locales. Los sistemas de átomos neutros ofrecen ventajas como la escalabilidad potencial a un gran número de qubits y la capacidad de direccionar y manipular individualmente cada qubit1. Sin embargo, también enfrentan desafíos, como la necesidad de mantener los átomos ultrafríos y la complejidad de los sistemas de control.
+              Son átomos individuales que se enfrían y atrapan en campos generados por láseres. Se destacan por su potencial escalabilidad y por la posibilidad de controlar individualmente cada qubit. Sin embargo, enfrentan desafíos como mantener muy bajas temperaturas para su funcionalidad y la complejidad de los sistemas de control.
             </p>
             <img src="public\images\atomo neutro.png" alt="Atomo neutro" class="atomo-neutro">
           </div>
@@ -292,11 +288,11 @@
       <li class="card" style="--index: 3;">
           <div class="card__content">
             <h2 class="card_title">Spin Semiconductor</h2>
-            <p>usan una propiedad cuántica llamada espín, que puede ser como un “interruptor” que está en posición |0⟩ o |1⟩.
-
-              Estos qubits se encuentran en materiales semiconductores, donde los electrones están atrapados en un lugar pequeño. Para controlar estos qubits, se usan microondas o campos magnéticos.
-              
-              Las ventajas incluyen que pueden usar la tecnología de los semiconductores que ya existe y que pueden mantener su estado cuántico por mucho tiempo. Sin embargo, es difícil controlar el entorno del espín y reducir el ruido.
+            <p>
+              Estos qubits utilizan una propiedad cuántica llamada espín, similar a un "interruptor" que puede 
+              estar en dos posiciones diferentes. Se encuentran en materiales semiconductores, controlados por 
+              microondas o campos magnéticos. Se destacan por sus largos tiempos de estabilidad. Sin embargo, controlar el entorno del espín es considerado un
+              desafío.
             </p>
             <img src="public\images\Spin Semiconductor.png" alt="Spin Semiconductor" class="spin-semiconductor">
           </div>
@@ -304,8 +300,8 @@
       <li class="card" style="--index: 4;">
         <div class="card__content">
           <h2 class="card_title">Bucle Superconductor</h2>
-          <p>utilizan circuitos hechos de materiales superconductores, que pueden conducir electricidad sin resistencia cuando se enfrían a temperaturas muy bajas. Una corriente eléctrica puede circular por un bucle superconductor indefinidamente sin perder energía. Los estados cuánticos se representan mediante diferentes estados de corriente en el bucle.</p>
-          <p>Las ventajas de los qubits de bucles superconductores incluyen tiempos de coherencia relativamente largos y la capacidad de integrarse con la tecnología de circuitos superconductores existente. Sin embargo, también enfrentan desafíos, como la necesidad de mantener temperaturas extremadamente bajas y la complejidad de los sistemas de control</p>
+          <p>Utilizan circuitos hechos de materiales superconductores que conducen electricidad sin resistencia a bajas temperaturas. Los estados cuánticos se representan mediante diferentes estados de corriente en el bucle. Se destacan por su tiempo de estabilidad prolongados y compatibilidad con la tecnología de circuitos superconductores. Desafíos incluyen mantener temperaturas extremadamente bajas y la complejidad en los sistemas de control.</p>
+
           <img src="public\images\Bucles Superconductores.png" alt="bucle superconductor" class="bucle-super">
         </div>
       </li>
@@ -502,6 +498,7 @@
 <style>
   .texto {
     font-size: 18px;
+    font-weight: 200;
     line-height: 1.6;
     position: relative;
     text-align: left;
@@ -583,6 +580,8 @@
   .introduccion p {
       text-align: left;
       margin: 0;
+      font-weight: 200;
+
   }
 
   /* Imagen dentro de la introducción */
@@ -657,6 +656,8 @@
     justify-content: center;
     align-items: center;
     max-width: 800px;
+    font-weight: 200;
+
   }
 
   .qubits h2 {
@@ -829,9 +830,6 @@
   /*Estilos para la sección de desafios*/
   /*Estilos Datawrapper*/
 
-  #datawrapper-chart-7wlDE{
-    margin: 50px 0;
-  }
   .aplicacion {
   margin-top: 200px; /*Adapt fondo*/
   display: flex;
@@ -880,6 +878,7 @@
       justify-content: center;
       align-items: center;
       max-width: 800px;
+      font-weight: 200;
     }
 
     .desafios h2 {
