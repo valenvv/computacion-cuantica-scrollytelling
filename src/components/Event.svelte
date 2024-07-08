@@ -72,7 +72,8 @@
       border-radius: 50%;
       top: 50%;
       position: center;
-      background-color: #5BADD5;
+      /* background-color: #5BADD5; las bolitas de shor y google deberian ser de este color */
+      background-color: #ffffff;
       text-align: justify;
       z-index: 10;
     }
