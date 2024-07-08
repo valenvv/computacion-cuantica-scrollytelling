@@ -453,8 +453,7 @@
       La computación cuántica enfrenta desafíos técnicos significativos que deben ser superados para alcanzar su pleno potencial. 
     </p>
     
-    
-    <div class="wrapper">
+    <!-- <div class="wrapper">
       <div class="container">
           <input type="radio" name="slide" id="c1" checked>
           <label for="c1" class="tarjeta">
@@ -468,7 +467,32 @@
           <input type="radio" name="slide" id="c4" >
           <label for="c4" class="tarjeta">
           </label>
+      </div>  -->
+
+      <div class="lista-desafios">
+        <div class="desafio">
+          <div class="numero">1</div>
+          <div class="contenido">
+            <h3>Decoherencia</h3>
+            <p>textito</p>
+          </div>
+        </div>
+        <div class="desafio">
+          <div class="numero">2</div>
+          <div class="contenido">
+            <h3>Errores cuanticos</h3>
+            <p>textito</p>
+          </div>
+        </div>
+        <div class="desafio">
+          <div class="numero">3</div>
+          <div class="contenido">
+            <h3>Escalabilidad</h3>
+            <p>textito</p>
+          </div>
+        </div>
       </div>
+      
   </div>
   </div>
   </div>
@@ -481,7 +505,7 @@
     font-size: 18px;
     line-height: 1.6;
     position: relative;
-    text-align: justify;
+    text-align: left;
   }
   .subtitulo {
     font-size: 36px;
@@ -558,7 +582,7 @@
 
   /* Estilo para contenido de texto */
   .introduccion p {
-      text-align: justify;
+      text-align: left;
       margin: 0;
   }
 
@@ -580,7 +604,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    text-align: justify;
+    text-align: left;
     z-index: 1;
 }
 
@@ -605,7 +629,7 @@
 
 /* Estilo para los párrafos */
 .section p {
-    text-align: justify;
+    text-align: left;
 }
  /* Estilos específicos para la sección de Superposición */
   .Superpos-section .contenido {
@@ -948,6 +972,50 @@
     margin: 0 0;
     z-index: 2;
   }
-</style>
+
+
+  /*Estilos para los desafíos*/
+  .lista-desafios {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.desafio {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.numero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #4f138f; /* Color del fondo del círculo */
+  color: white; /* Color del texto del número */
+  font-size: 1.5em;
+}
+
+.contenido {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centra el contenido verticalmente */
+}
+
+.contenido h3 {
+  margin: 0;
+  align-self: flex-start; /* Asegura que el h3 esté alineado a la izquierda */
+}
+
+.contenido p {
+  margin: 5px 0 0 0;
+}
+
+
+  
+  </style>
   
 
