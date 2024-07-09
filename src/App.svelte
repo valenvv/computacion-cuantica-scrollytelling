@@ -174,14 +174,27 @@
     }, 100);
   }
  
+  let cancion;
+  let reproduciendo = false;
  
 
   // Call the function to change the image when the component is mounted
   onMount(() => {
     changeImage();
-
-    
+    cancion = document.getElementById("cancion");
   });
+
+  function togglePlayback() {
+    if (!cancion) return;
+
+    if (reproduciendo) {
+      cancion.pause();
+    } else {
+      cancion.play();
+    }
+
+    reproduciendo = !reproduciendo;
+  }
 
 
 </script>
@@ -195,11 +208,21 @@
     <h1 class="headline">Computación Cuántica</h1>
     <h2 class="sub_principio">Un viaje a través de los datos</h2>
     <h2 class="sub_principioNombres">Valentina Vitetta y Caterina Villegas</h2>
+    <div class="sub_principioPlay">
+      <p>Viví la experiencia completa</p>
+      <button class="play" on:click={togglePlayback}>
+        <img src="public/images/play.png" alt="play" width="30px">
+      </button>
+    </div>
     <Stars />
   </div>
-
+  
+  <audio id="cancion">
+    <source src="public/song/Fission.mp3" type="audio/mp3">
+  </audio>
+  
   <div class="introduccion section">
-    <p class="texto">
+    <p data-aos="fade-up" class="texto">
       La <strong>computación cuántica</strong> es un campo de estudio que aplica los principios
       de la mecánica cuántica, una rama de la física que describe el
       comportamiento de las partículas a nivel subatómico, a la informática. A
@@ -218,7 +241,7 @@
     <div>
       <img src="/images/superposition.gif" alt="superposition"  class="charts" />
     </div>
-    <div class="contenido">
+    <div data-aos="fade-up" class="contenido">
       <h2 class = "subtitulo">Superposición</h2>
       <p class = "texto">
         En la superposición, los qubits pueden representar una combinación de todos los posibles estados al mismo tiempo. 
@@ -229,9 +252,9 @@
   </section>
   <div class="section entrelazamiento-section">
 
-    <div class="contexto-entrelazamiento">
+    <div data-aos="fade-up" class="contexto-entrelazamiento">
       <h2 class = "subtitulo">Entrelazamiento</h2>
-      <p class = "texto">
+      <p  class = "texto">
         El entrelazamiento cuántico describe cómo dos qubits pueden estar tan interconectados que el estado de uno no puede describirse
         independientemente del estado del otro, sin importar la distancia que los separe. Este fenómeno es fundamental en la computación cuántica,
         permitiendo conexiones instantáneas que desafían las limitaciones de la física clásica.
@@ -244,8 +267,8 @@
 
   <div class="qubits ">
     <div class="contenido">
-      <h2 data-aos="fade-up" data-aos-anchor-placement="top-center">Qubit: La unidad básica de información</h2>
-      <p>
+      <h2 data-aos="fade-up">Qubit: La unidad básica de información</h2>
+      <p >
         A diferencia de los bits clásicos, los qubits pueden representar tanto 0 como 1 al mismo tiempo, gracias a la superposición cuántica. 
         A continuación, se describen los diferentes tipos de qubits utilizados en esta disciplina:
         
@@ -575,7 +598,7 @@
     flex-direction: column;
     z-index: 1;
     width: 100%;
-    margin-bottom: 210px;
+    margin-bottom: 160px;
   }
 
   /*  Animación color del título*/
@@ -632,8 +655,33 @@
     justify-content: center;
     position: relative;
     margin-top: 0;
+    margin-bottom: 50px;
     z-index: 1;
   }
+
+  .sub_principioPlay{
+    font-size:5;
+    text-align: center;
+    justify-content: center;
+    position: relative;
+    margin: 0;
+    z-index: 1;
+  }
+
+
+  .play{
+    z-index: 1;
+    cursor: pointer;
+    border: none;
+    background: none;
+    padding: 0;
+    max-width: 40px;
+
+  }
+  .play:focus {
+    outline: none; /* Elimina el contorno al enfocar */
+  }
+
 
   /* Introducción */
   .introduccion {
