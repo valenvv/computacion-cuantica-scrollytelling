@@ -45,7 +45,22 @@
     7: "RandomForest1.png"
   }
 
+  /* Variables para el scroller del mapa */
+  let count4
+  let index4
+  let offset4
+  let progress4
+  let top4 = 0.1
+  let threshold4 = 0.5
+  let bottom4 = 0.9
 
+  /* Mapa */
+  let mapa = {
+    0: "world 1.svg",
+    1: "world 2.svg",
+    2: "world 3.svg",
+    3: "world 4.svg"
+  }
   const events = [
   {
     name: "La Hipótesis Cuántica",
@@ -190,16 +205,6 @@
     
     <img src="public/images/quantumComputer.png" alt="quantumComputer" />
     
-    <!-- <p>
-      Los Qubits permiten a los ordenadores cuánticos procesar una gran cantidad
-      de información simultáneamente. Esto tiene el potencial de resolver
-      problemas que son inabordables para los ordenadores clásicos, abriendo
-      nuevas posibilidades en campos como la criptografía, la optimización de
-      sistemas complejos, la simulación de materiales y medicamentos a nivel
-      molecular, entre otros. Sin embargo, la computación cuántica todavía está
-      en sus primeras etapas de desarrollo y presenta muchos desafíos técnicos y
-      teóricos.
-    </p> -->
   </div>
 
 
@@ -345,7 +350,54 @@
     {#each events as {name, date,description}, i}
         <Event {name} date={date} left={i % 2 === 0} eventID={name} description={description} data-aos="slide-left"/>
     {/each}
-</div>    
+</div>
+<div class="mapaSection">
+  <div class="contenido">
+    <h2>Panorama Global: Investigación en Computación Cuántica</h2>
+    <p>La investigación en computación cuántica está en constante crecimiento y expansión alrededor del mundo. Este mapa muestra un panorama global de las publicaciones en este campo, destacando los países líderes en investigación cuántica.</p>
+  </div>
+</div>
+  <div class="mapa">
+    <Scroller
+      top={top4}
+      threshold={threshold4}
+      bottom={bottom4}
+      bind:count={count4}
+      bind:index={index4}
+      bind:offset={offset4}
+      bind:progress={progress4}
+    >
+      <div slot="background" class="image_containerm">
+        <img src="/images/{mapa[index4]}" alt="chart {index4}" class="mapa" width="55%" />
+        <br>
+      </div>
+      <div slot="foreground" class="foreground_containerm">
+        <section class="step_foregroundm">
+          <div class="epi_foregroundm">
+            <p> Estados Unidos y China lideran en el número total de publicaciones en computación cuántica y algoritmos cuánticos. </p>
+          </div>
+        </section>
+        <section class="step_foregroundm">
+          <div class="epi_foregroundm">
+            <p>Canadá, Alemania y Rusia se destacan con una presencia notable en la investigación de computación cuántica, aunque no tan masiva como los líderes mundiales.</p>
+          </div>
+        </section>
+        <section class="step_foregroundm">
+          <div class="epi_foregroundm">
+            <p>
+              Países como España y Japón también tienen un impacto considerable, aunque más modesto, en este ámbito, contribuyendo significativamente al progreso global.
+            </p>
+          </div>
+        </section>
+        <section class="step_foregroundm">
+          <div class="epi_foregroundm">
+            <p>tiempo de cómputo</p>
+          </div>
+        </section>
+        
+      </div>
+    </Scroller>
+  </div> 
 <div class="aplicacion">
   <div class="contenido">
     <h2>Aplicaciones de la computación cuántica en el machine learning</h2>
@@ -355,7 +407,8 @@
     <p>
       En numerosos estudios e investigaciones se han evaluado diversas técnicas de codificación de datos cuánticos. En en este caso, nos centraremos en un estudio que analiza las principales técnicas de codificación: codificación en base, codificación en ángulo y codificación en amplitud. Estas técnicas se aplicaron a varios modelos de aprendizaje automático, incluyendo Regresión Logística, K-Nearest Neighbors (KNN), Support Vector Machines (SVM) y varios métodos de ensamblado como Random Forest, LightGBM, AdaBoost y CatBoost.
     </p>
-    <iframe title="[ Insert title here ]" aria-label="Grouped Columns" id="datawrapper-chart-7wlDE" src="https://datawrapper.dwcdn.net/7wlDE/7/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="369" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();</script>  </div>
+    <!-- <iframe title="[ Insert title here ]" aria-label="Grouped Columns" id="datawrapper-chart-7wlDE" src="https://datawrapper.dwcdn.net/7wlDE/7/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="369" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();</script> -->
+  </div>
   <div class="graficoApp">
     <Scroller
       top={top3}
@@ -494,6 +547,7 @@
     font-size: 36px;
     margin-bottom:-10px;
     position: relative;
+    text-align: center;
   }
 
   .charts {
@@ -583,6 +637,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
   }
 
 .contenido p {
@@ -614,7 +669,7 @@
 
 /* Estilo para los párrafos */
 .section p {
-    text-align: left;
+  text-align: left;
 }
  /* Estilos específicos para la sección de Superposición */
   .Superpos-section .contenido {
@@ -648,7 +703,7 @@
   }
 
   .qubits h2 {
-    font-size: 56px;
+    font-size: 46px;
     margin-bottom: 10px;
     color: #CB9BFF;
   }
@@ -787,7 +842,7 @@
 
   .historia h3 {
     font-size: 26px;
-    margin: 0;
+    margin: 20px;
 
   }
 
@@ -817,7 +872,6 @@
     }
 
   /*Estilos para la sección de desafios*/
-  /*Estilos Datawrapper*/
 
   .aplicacion {
   margin-top: 200px; /*Adapt fondo*/
@@ -966,43 +1020,101 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-}
+  }
 
-.desafio {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
+  .desafio {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
 
-.numero {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background-color: #4f138f; /* Color del fondo del círculo */
-  color: white; /* Color del texto del número */
-  font-size: 1.5em;
-}
+  .numero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #4f138f; /* Color del fondo del círculo */
+    color: white; /* Color del texto del número */
+    font-size: 1.5em;
+  }
 
-.contenido {
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* Centra el contenido verticalmente */
-}
+  .contenido {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra el contenido verticalmente */
+  }
 
-.contenido h3 {
-  margin: 0;
-  align-self: flex-start; /* Asegura que el h3 esté alineado a la izquierda */
-}
+  .contenido h3 {
+    margin: 0;
+    align-self: flex-start; /* Asegura que el h3 esté alineado a la izquierda */
+  }
 
-.contenido p {
-  margin: 5px 0 0 0;
-}
+  .contenido p {
+    margin: 5px 0 0 0;
+  }
 
+  /*Estilos scroller mapa*/
+  .mapaSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    text-align: center;
+    margin-top: 200px;
+    
+  }
+  .mapaSection .contenido {
+    max-width: 800px;
+    font-weight: 200;
+
+  }
+
+  .mapaSection h2 {
+    font-size: 46px;
+    margin-bottom: 10px;
+    color: #ff9d42;
+  }
+
+  .mapa {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .mapa p {
+    margin-bottom: 0;
+    justify-content:left;
+    align-items: center;
+    font-weight: 200;
+  }
+
+  .image_containerm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+  }
+  .foreground_containerm {
+    align-items: center;
+  }
+  .step_foregroundm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    color: white;
+    padding: 1em;
+    margin: 0 0 10em 0;
+  }
+  .epi_foregroundm {
+    padding: 20px;
+    max-width: 120px;
+    background-color: rgba(0, 0, 0, 0.877);
+  }
 
   
-  </style>
+</style>
   
 
