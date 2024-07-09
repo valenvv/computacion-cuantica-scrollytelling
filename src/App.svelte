@@ -575,6 +575,7 @@
     flex-direction: column;
     z-index: 1;
     width: 100%;
+    margin-bottom: 210px;
   }
 
   /*  Animación color del título*/
@@ -597,12 +598,13 @@
   }
 
   .headline {
-    font-family: "Electrolize", sans-serif;
+    font-family: "Arp", sans-serif;
     font-weight: bolder;
-    font-size: 60px;
+    font-size: 55px;
     line-height: 1.2;
     font-weight: bolder;
     text-align: center;
+    align-items: center;
     background: linear-gradient(90deg,  #CB9BFF, #3D46F2);
     background-size: 200% 200%;
     background-clip: text;
@@ -610,7 +612,7 @@
     color: transparent;
     animation: gradientShift 4s cubic-bezier(0.42, 0, 0.58, 1) infinite;
     z-index: 1;
-    margin: 210px 0;
+    margin: 210px 0 0 0;
   }
 
   .sub_principio{
@@ -619,7 +621,7 @@
     text-align: center;
     justify-content: center;
     position: relative;
-    transform: translateY(-710%);
+    margin: 0;
     z-index: 1;
   }
 
@@ -629,7 +631,7 @@
     text-align: center;
     justify-content: center;
     position: relative;
-    transform: translateY(-1310%);
+    margin-top: 0;
     z-index: 1;
   }
 
@@ -792,7 +794,7 @@
     color:#CB9BFF;
     font-weight: 750;
     font-size: 30px;
-    font-style: oblique;
+    font-family: 'Arp';
   }
 
  
