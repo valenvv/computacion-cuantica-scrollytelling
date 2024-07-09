@@ -37,7 +37,7 @@
   let graficoApp = {
     0: "KNN1.png",
     1: "SVM1.png",
-    2: "Logistic Reg1.png",
+    2: "LogisticReg1.png",
     3: "AdaBoost1.png",
     4: "CatBoost1.png",
     5: "AdaBoost1.png",
