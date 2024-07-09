@@ -187,9 +187,14 @@
 </script>
 
 <main>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Electrolize&display=swap" rel="stylesheet">
   
   <div class="header section">
     <h1 class="headline">Computación Cuántica</h1>
+    <h2 class="sub_principio">Un viaje a través de los datos</h2>
+    <h2 class="sub_principioNombres">Valentina Vitetta y Caterina Villegas</h2>
     <Stars />
   </div>
 
@@ -592,6 +597,8 @@
   }
 
   .headline {
+    font-family: "Electrolize", sans-serif;
+    font-weight: bolder;
     font-size: 60px;
     line-height: 1.2;
     font-weight: bolder;
@@ -603,7 +610,27 @@
     color: transparent;
     animation: gradientShift 4s cubic-bezier(0.42, 0, 0.58, 1) infinite;
     z-index: 1;
-    margin: 250px 0;
+    margin: 210px 0;
+  }
+
+  .sub_principio{
+    
+    font-weight: normal;
+    text-align: center;
+    justify-content: center;
+    position: relative;
+    transform: translateY(-710%);
+    z-index: 1;
+  }
+
+  .sub_principioNombres{
+    font-weight: lighter;
+    font-size: medium;
+    text-align: center;
+    justify-content: center;
+    position: relative;
+    transform: translateY(-1310%);
+    z-index: 1;
   }
 
   /* Introducción */
@@ -612,8 +639,8 @@
     grid-template-columns: 1fr 1fr;
     align-items: center;
     gap: 50px;
-    margin: 40px auto;
-    padding: 20px;
+    margin: 0px auto;
+    padding: 10px;
     max-width: 80%;
 }
 
@@ -627,8 +654,8 @@
 
   /* Imagen dentro de la introducción */
   .introduccion img {
-      max-width: 100%;
-      width: 600px;
+      max-width: 40%;
+      width: 100px;
       margin: 0 auto;
       border-radius: 50px;
   }
@@ -857,12 +884,16 @@
         content: '';
         position: absolute;
         width: 3px;
-        background-color: #3D46F2;
+        background-color: #ffffff;
         top: 4%;
         bottom:4%;
         left: 50%;
         margin-left: -3px;
         z-index: 8;
+    }
+    .timeline .events .date {
+        font-family: 'Noto Sans', sans-serif; /* Cambia 'Noto Sans' por la fuente que desees utilizar */
+        /* Otros estilos aquí si los necesitas */
     }
 
     @media screen and (max-width: 600px) {
