@@ -14,6 +14,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+@font-face {
+  font-family: 'Arp';
+  src: url(/public/fonts/ARPDisplay-240.ttf);
+
+}
+
 body {
   /* background-color: rgb(0, 0, 0); */
   color: rgb(255, 255, 255);
