@@ -21,7 +21,7 @@
     0: "spinSemiconductorBarras.svg",
     1: "ionAtrapadoBarras.svg",
     2: "atomoNeutroBarras.svg",
-    3: "bucleSuperconductorBarras.svg",
+    3: "bucleSuperconductorBarras.svg"
   }
 
   /* Variables para el scroller */
@@ -296,9 +296,11 @@
 
 <div class="qubits">
   <div class="contenido">
-    <p> La capacidad de entrelazar múltiples qubits simultáneamente es crucial para el rendimiento y la potencia de los sistemas cuánticos. Cuantos más qubits se puedan entrelazar simultáneamente, mayor será la capacidad del sistema para resolver problemas complejos y realizar cálculos que están fuera del alcance de las computadoras clásicas. </p>
+    <h2>Capacidad de entrelazamiento: Midiendo su eficiencia</h2>
+    <p> La capacidad de entrelazar múltiples qubits simultáneamentees crucial para el rendimiento y la potencia de los sistemas cuánticos. Cuantos más qubits se puedan entrelazar simultáneamente, mayor será la capacidad del sistema para resolver problemas complejos y realizar cálculos que están fuera del alcance de las computadoras clásicas. </p>
     <p>A continuación, se presenta una comparación de la cantidad de qubits que se pueden entrelazar simultáneamente en diferentes sistemas de qubits:</p>
   </div>
+
 </div>
 
 <div class="barras">
@@ -318,30 +320,36 @@
 <div slot="foreground" class="foreground_container">
   <section class="step_foreground">
     <div class="epi_foreground">
-      <h3>Seccion {index2 + 1}</h3>
-      <p>Gráfico 1</p>
+      <h3>Spin Semiconductor</h3>
+      <p>Pueden entrelazar hasta 4 qubits a la vez. Aunque este número es menor, la tecnología está en desarrollo y tiene potencial para mejoras futuras.</p>
     </div>
   </section>
   <section class="step_foreground">
     <div class="epi_foreground">
-      <h3>Seccion {index2 + 1}</h3>
-      <p>Gráfico 2</p>
+      <h3>Ion Atrapado</h3>
+      <p>Pueden entrelazar hasta 32 qubits simultáneamente, lo que demuestra una capacidad considerable para realizar cálculos cuánticos más complejos.</p>
     </div>
   </section>
   <section class="step_foreground">
     <div class="epi_foreground">
-      <h3>Seccion {index2 + 1}</h3>
-      <p>Gráfico 3</p>
+      <h3>Átomo Neutro</h3>
+      <p>Permiten entrelazar hasta 50 qubits al mismo tiempo, destacándose por su eficiencia en el control y manipulación de qubits.</p>
     </div>
   </section>
     <section class="step_foreground">
     <div class="epi_foreground">
-      <h3>Seccion {index2 + 1}</h3>
-      <p>Gráfico 4</p>
+      <h3>Bucle Superconductor</h3>
+      <p>Lideran con la capacidad de entrelazar hasta 65 qubits simultáneamente, lo que los posiciona a la vanguardia de la tecnología cuántica actual.</p>
     </div>
   </section>
   </div>
   </Scroller>
+  </div>
+
+  <div class="qubits">
+    <div class="contenido">
+      <p> Las diferentes plataformas de qubits varían en su capacidad de entrelazado, lo que refleja tanto sus fortalezas como sus desafíos. Esta diversidad de enfoques subraya el potencial de la computación cuántica y la posibilidad de desarrollos futuros que podrían superar las tecnologías actuales. La colaboración y el avance continuo serán claves para aprovechar plenamente estas capacidades y avanzar en la computación cuántica. </p>
+    </div>
   </div>
 
   <div class="historia">
@@ -395,7 +403,15 @@
         </section>
         <section class="step_foregroundm">
           <div class="epi_foregroundm">
-            <p>tiempo de cómputo</p>
+            <p>
+              Por último, aunque algunos países tienen menos publicaciones
+              en computación cuántica, su potencial no debe subestimarse.
+            </p>
+            <p>
+              Con el tiempo y 
+              el apoyo adecuado, estas naciones podrían hacer contribuciones significativas al 
+              progreso global en este campo emergente. La colaboración internacional será clave para fomentar la investigación en este ámbito.
+            </p>
           </div>
         </section>
         
@@ -695,7 +711,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 800px;
+    max-width: 900px;
     font-weight: 200;
 
   }
@@ -776,10 +792,38 @@
       max-width: max-content;
   }
   .card_title{
-    color:#CB9BFF;
+    color:#e6d2fc;
     font-weight: 750;
     font-size: 30px;
     font-family: 'Arp';
+  }
+
+  /* Estilos para el scroller barras*/
+  .foreground_container {
+    pointer-events: none;
+    padding-left: 50%;
+  }
+  .step_foreground {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+    font-weight: 200;
+    padding: 1em;
+    margin: 0 0 2em 4em;
+  }
+  .epi_foreground {
+    padding: 20px;
+    max-width: 300px;
+    background-color:rgba(44, 44, 44, 0.5);
+  }
+  .image_container {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    margin-left: 10%;
+    height: 100vh;
   }
 
  
@@ -850,7 +894,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 800px;
+    max-width: 900px;
   }
 
   .historia h2 {
@@ -907,7 +951,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 800px;
+  max-width: 900px;
   font-weight: 200;
   }
 
@@ -940,7 +984,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      max-width: 800px;
+      max-width: 900px;
       font-weight: 200;
     }
 
@@ -1015,7 +1059,7 @@
     
   }
   .mapaSection .contenido {
-    max-width: 800px;
+    max-width: 900px;
     font-weight: 200;
 
   }
@@ -1053,7 +1097,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 60vh;
+    height: 100vh;
     color: white;
     padding: 1em;
     margin: 0 0 10em 0;
