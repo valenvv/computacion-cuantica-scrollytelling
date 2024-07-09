@@ -441,124 +441,145 @@
       </div>
     </Scroller>
   </div> 
-<div class="aplicacion">
-  <div class="contenido">
-    <h2>Revolución cuántica en el machine learning: Datos transformados</h2>
-    <p class= "parrafosAppIntro" style="margin-top: 30px; margin-bottom: 20px;"> 
-      La computación cuántica está revolucionando el aprendizaje automático mediante la codificación de datos cuánticos. Esta técnica transforma datos comunes en estados cuánticos, donde un estado cuántico indica si un qubit está en 1, 0, o una combinación de ambos simultáneamente en un instante específico. Esta capacidad única permite a los algoritmos cuánticos procesar y analizar información de manera más rápida y eficiente que los métodos clásicos de aprendizaje automático. 
-    </p>
-    <p class= "parrafosAppIntro"  style="margin-bottom: 60px;"> 
-      De esta manera, se comparan diferentes modelos de aprendizaje automático, incluyendo Regresión Logística, K-Nearest Neighbors (KNN), Support Vector Machines (SVM) y métodos de ensamblado como Random Forest, LightGBM, AdaBoost y CatBoost.  
-    </p>
-    <!-- <iframe title="[ Insert title here ]" aria-label="Grouped Columns" id="datawrapper-chart-7wlDE" src="https://datawrapper.dwcdn.net/7wlDE/7/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="369" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();</script> -->
-  </div>
-  <div class="graficoApp">
-    <Scroller
-      top={top3}
-      threshold={threshold3}
-      bottom={bottom3}
-      bind:count={count3}
-      bind:index={index3}
-      bind:offset={offset3}
-      bind:progress={progress3}
-    >
-      <div slot="background" class="image_containerApp">
-        <img src="/images/{graficoApp[index3]}" alt="chart {index3}" class="graficoApp" width="50%" />
-      </div>
-      <div slot="foreground" class="foreground_containerApp">
-        <section class="step_foregroundApp">
-          <div class="epi_foregroundApp">
-            <h3>Presentación</h3>
-            <p class="parrafosApp"> Este gráfico presenta una comparación entre distintos modelos en sus versiones clásicas y cuánticas. El objetivo es visualizar las diferencias en su desempeño bajo las mismas condiciones experimentales. 
-              <p class="colorRosa">Rosa: modelos clásicos.</p>
-              <p class="colorNaranja">Naranja: modelos cuánticos.</p>
-              <p class= "modeloActual">Modelo actual: KNN1</p>
-            
-          </div>
-        </section>
-        <section class="step_foregroundApp">
-          <div class="epi_foregroundApp">
-            <h3>¿Qué significan los modelos?</h3>
-            <p class="parrafosApp">Cada uno de estos modelos/algoritmos es una herramienta matemática que aprende patrones a partir de datos de entrenamiento. Una vez entrenados, estos modelos pueden hacer predicciones o tomar decisiones sobre nuevos datos basándose en los patrones que han aprendido.</p>
-          </div>
-        </section>
-        <section class="step_foregroundApp">
-          <div class="epi_foregroundApp">
-            <h3>¿Qué medimos?</h3>
-            <p>precisión</p>
-            <p class="parrafosApp">
-              Medimos el rendimiento de los dos tipos de modelos durante el proceso de entrenamiento.
-              La precisión nos indica qué tan bien predice el modelo. Es una medida de la exactitud de las predicciones hechas por el modelo en comparación con los valores reales.
+  <div class="aplicacion">
+    <div class="contenido">
+      <h2>Revolución cuántica en el machine learning: Datos transformados</h2>
+      <p class= "parrafosAppIntro" style="margin-top: 30px; margin-bottom: 20px;"> 
+        La computación cuántica está revolucionando el aprendizaje automático mediante la codificación de datos cuánticos. Esta técnica transforma datos comunes en estados cuánticos, donde un estado cuántico indica si un qubit está en 1, 0, o una combinación de ambos simultáneamente en un instante específico. Esta capacidad única permite a los algoritmos cuánticos procesar y analizar información de manera más rápida y eficiente que los métodos clásicos de aprendizaje automático. 
+      </p>
+      <p class= "parrafosAppIntro"  style="margin-bottom: 60px;"> 
+        El siguiente gráfico presenta una comparación entre distintos modelos de aprendizaje automático en sus versiones clásicas y cuánticas. El objetivo es visualizar las diferencias en su desempeño bajo las mismas condiciones experimentales. Se analizan desde métodos lineales hasta técnicas avanzadas de ensamblado.
+      </p>
+      <!-- <iframe title="[ Insert title here ]" aria-label="Grouped Columns" id="datawrapper-chart-7wlDE" src="https://datawrapper.dwcdn.net/7wlDE/7/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="369" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();</script> -->
+    </div>
+    <div class="graficoApp">
+      <Scroller
+        top={top3}
+        threshold={threshold3}
+        bottom={bottom3}
+        bind:count={count3}
+        bind:index={index3}
+        bind:offset={offset3}
+        bind:progress={progress3}
+      >
+        <div slot="background" class="image_containerApp">
+          <img src="/images/{graficoApp[index3]}" alt="chart {index3}" class="graficoApp" width="50%" />
+        </div>
+        <div slot="foreground" class="foreground_containerApp">
+          <section class="step_foregroundApp">
+            <div class="epi_foregroundApp">
+              <h3 class="titulosApp">Presentación</h3>
+              <p class="parrafosApp"> En este gráfico, el eje x representa el tiempo de ejecución y el eje y la precisión de los modelos. Los modelos clásicos se representan con puntos de color rosa, mientras que los modelos cuánticos se representan con puntos de color naranja. 
+               
+                <p class= "modeloActual">Modelo actual: KNN</p>
+              
+            </div>
+          </section>
+          <section class="step_foregroundApp">
+            <div class="epi_foregroundApp">
+              <h3 class="titulosApp">¿Qué son los modelos?</h3>
+              <p class="parrafosApp">Son herramientas matemáticas que aprenden patrones de datos de entrenamiento. Una vez entrenados, pueden hacer predicciones o tomar decisiones sobre nuevos datos basándose en los patrones que han aprendido.</p>
+              <p class= "modeloActual">Modelo actual: SVM</p>
+            </div>
+          </section>
+          <section class="step_foregroundApp">
+            <div class="epi_foregroundApp">
+              <h3 class="titulosApp">Modelos evaluados</h3>
+              <ul class="bullets">
+                <li>Regresión Logística (LogisticReg)</li>
+                <li>K-Nearest Neighbors (KNN)</li>
+                <li>Support Vector Machines (SVM)</li>
+                <li>Random Forest</li>
+                <li>LightGBM</li>
+                <li>AdaBoost</li>
+                <li>CatBoost</li>
+              </ul>
+              <p class= "modeloActual">Modelo actual: LogisticReg</p>
+            </div>
+          </section>
+          <section class="step_foregroundApp">
+            <div class="epi_foregroundApp">
+              <h3 class="titulosApp">¿Qué medimos?</h3>
+              <p>Precisión</p>
+              <p class="parrafosApp">
+                Durante el entrenamiento de los modelos, medimos su rendimiento. La precisión nos dice qué tan exactas son las predicciones del modelo en comparación con los valores reales.
+              </p>
+              <p class= "modeloActual">Modelo actual: AdaBoost</p>
+            </div>
+          </section>
+          <section class="step_foregroundApp">
+            <div class="epi_foregroundApp">
+              <h3 class="titulosApp">¿Qué medimos?</h3>
+              <p>Tiempo de ejecución (s)</p>
+              <p class="parrafosApp">
+                Este término se refiere al tiempo necesario para que el modelo complete el proceso de entrenamiento. Es crucial para evaluar la eficiencia del modelo en términos de recursos y tiempo utilizados durante el entrenamiento.
             </p>
-          </div>
-        </section>
-        <section class="step_foregroundApp">
-          <div class="epi_foregroundApp">
-            <h3>¿Qué medimos?</h3>
-            <p>tiempo de cómputo</p>
-            <p class="parrafosApp">El tiempo de cómputo indica cuánto tiempo tarda el modelo en completar el proceso de entrenamiento. Esto es importante porque nos ayuda a evaluar la eficiencia del modelo en términos de recursos y tiempo necesarios para entrenarlo. Un menor tiempo de cómputo puede ser preferible si necesitamos resultados rápidos o si estamos trabajando con recursos limitados.
-          </p>
-          </div>
-        </section>
-        <section class="step_foregroundApp">
-          <div class="epi_foregroundApp">
-            <h3>Sección {index3 + 1}</h3>
-            <p>Gráfico5</p>
-          </div>
-        </section>
-        <section class="step_foregroundApp">
-          <div class="epi_foregroundApp">
-            <h3>Sección {index3 + 1}</h3>
-            <p>Gráfico6</p>
-          </div>
-        </section>
-        <section class="step_foregroundApp">
-          <div class="epi_foregroundApp">
-            <h3>Conclusiones</h3>
-            <p>Los modelos cuánticos, en general, muestran una mayor precisión que los modelos clásicos, lo que demuestra el potencial de la computación cuántica para mejorar el rendimiento de los modelos de aprendizaje automático.</p>
-            <p>Sin embargo, esta mejora en la precisión viene con un aumento en el tiempo de ejecución, lo cual es un trade-off que debe considerarse dependiendo del caso de uso específico.</p>
-          </div>
-        </section>
-        
-      </div>
-    </Scroller>
-  </div>
-  
-
-<div class="desafios">
-  <div class="contenido">
-    <h2>Desafíos actuales y futuro de la computación cuántica</h2>
-    <p>
-      La computación cuántica enfrenta desafíos técnicos significativos que deben ser superados para alcanzar su pleno potencial. 
-    </p>
+            <p class= "modeloActual">Modelo actual: CatBoost</p>
+            </div>
+          </section>
+          
+          <section class="step_foregroundApp">
+            <div class="epi_foregroundApp">
+              <h3 class="titulosApp">Versión clásica vs cuántica</h3>
+              <!-- <p>
+                Cada modelo tiene una versión clásica y una versión cuántica. Esto significa que se desarrollaron dos variantes del mismo modelo, una adaptada para funcionar en computadoras clásicas y otra en computadoras cuántica.
+              </p> -->
+              <ul class="bullets">
+                <li><strong>Versión Clásica:</strong> Es la implementación estándar del modelo utilizando principios tradicionales de matemáticas y computación.</li>
+                <li><strong>Versión Cuántica:</strong> Es una adaptación del mismo modelo que utiliza principios de la mecánica cuántica.</li>
+              </ul>
+              <p class= "modeloActual">Modelo actual: LightGBM</p>
+            </div>
+          </section>
+          <section class="step_foregroundApp">
+            <div class="epi_foregroundApp">
+              <h3 class="titulosApp">Conclusiones</h3>
+              <p>Los modelos cuánticos suelen ser más precisos que los modelos clásicos, mostrando así su potencial para mejorar el aprendizaje automático. </p>
+              <p>Sin embargo, esta mejora viene con un aumento en el tiempo de ejecución, lo cual es un trade-off que debe considerarse dependiendo del caso de uso.</p>
+              <p class= "modeloActual">Modelo actual: RandomForest</p>
+            </div>
+          </section>
+          
+        </div>
+      </Scroller>
+    </div>
     
-      <div class="lista-desafios">
-        <div class="desafio">
-          <div class="numero">1</div>
-          <div class="contenido">
-            <h3>Decoherencia</h3>
-            <p>textito</p>
-          </div>
-        </div>
-        <div class="desafio">
-          <div class="numero">2</div>
-          <div class="contenido">
-            <h3>Errores cuanticos</h3>
-            <p>textito</p>
-          </div>
-        </div>
-        <div class="desafio">
-          <div class="numero">3</div>
-          <div class="contenido">
-            <h3>Escalabilidad</h3>
-            <p>textito</p>
-          </div>
-        </div>
-      </div>
+  
+  <div class="desafios">
+    <div class="contenido">
+      <h2>Desafíos actuales y futuro de la computación cuántica</h2>
+      <!-- <p>
+        La computación cuántica enfrenta desafíos técnicos significativos que deben ser superados para alcanzar su pleno potencial. 
+      </p> -->
       
-  </div>
-  </div>
-  </div>
+        <div class="lista-desafios">
+          <div class="desafio">
+            <div class="numero">1</div>
+            <div class="contenido">
+              <h3 class= "titulosDesafios">Decoherencia</h3>
+              <p>
+                Los qubits pueden perder su estado cuántico cuando interactúan con el entorno.</p>
+            </div>
+          </div>
+          <div class="desafio">
+            <div class="numero">2</div>
+            <div class="contenido">
+              <h3 class= "titulosDesafios">Errores cuanticos</h3>
+              <p>Los errores en los qubits, al ser sensibles al entorno, limitan la exactitud de los sistemas cuánticos.</p>
+            </div>
+          </div>
+          <div class="desafio">
+            <div class="numero">3</div>
+            <div class="contenido">
+              <h3 class= "titulosDesafios">Escalabilidad</h3>
+              <p>Mantener la precisión y coherencia de múltiples qubits es un desafío por su sensibilidad al entorno.</p>
+            </div>
+          </div>
+        </div>
+        
+    </div>
+    </div>
+    </div>
   <!-- Conclusion -->
   <div class="bg-animation">
     <div id="stars"></div>
@@ -931,6 +952,11 @@
   position: relative;
   width: 80%;
 }
+
+.bullets {
+    list-style-type: disc; /* Asegura que todas las listas usen puntos como viñetas */
+    padding-left: 20px;    /* Asegura que haya suficiente espacio para las viñetas */
+}
   .foreground_containerApp {
     pointer-events: none;
     padding-left: 50%;
@@ -944,10 +970,10 @@
     max-width: 100%;
     display: flex;
     align-items: center; 
-    width: 90%;
+    width: 82%;
     margin-left: 150px;
     height: 100vh;
-    transform: translate(-25%, -10%);
+    transform: translate(-25%, -8%);
   }
   .step_foregroundApp {
     /* background-color: #3D46F2; */
@@ -961,15 +987,21 @@
     color: white;
     padding: 1em;
     margin: 0 8em 2em 0;
-    transform: translateX(15%);
+    transform: translateX(18%);
   }
   .epi_foregroundApp {
     padding: 20px;
     height: 50%;
     width: 100%;
-    background-color: rgba(44, 44, 44, 0.5);
+    background-color: rgba(30, 30, 30, 0.5);
+    /* border: 1px solid #CB9BFF; */
+    border-radius: 10px;
     font-weight: 200;
     text-align: left; 
+  }
+  .titulosApp{
+    font-size: 15px; /*PREGUNTAR */
+    font-family: 'Arp';
   }
 
   .modeloActual{
@@ -1066,6 +1098,39 @@
   margin-bottom: 0;
   }
 
+    /*Estilos para la sección de desafios*/
+
+    .aplicacion {
+  margin-top: 200px; /*Adapt fondo*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  text-align: center;
+  }
+
+  .aplicacion .contenido {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 900px;
+  font-weight: 200;
+  }
+
+  .aplicacion h2 {
+    font-size: 46px;
+    margin-bottom: 10px;
+    color: #ffffff;
+  }
+
+  .parrafosAppIntro {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 0;
+  }
+
   /*Estilos para la sección de desafios*/
   
     .desafios {
@@ -1076,6 +1141,7 @@
       align-items: center;
       height: auto;
       text-align: center;
+      margin-bottom: 10%;
     }
 
     .desafios .contenido {
@@ -1110,9 +1176,12 @@
 
   /*Estilos para los desafíos*/
   .lista-desafios {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: flex-start;
+    margin-top: 2%;
+  
   }
 
   .desafio {
@@ -1130,6 +1199,10 @@
     border-radius: 50%;
     background-color: #4f138f; /* Color del fondo del círculo */
     color: white; /* Color del texto del número */
+    font-size: 1.2em;
+    font-family: 'Arp';
+   
+
   }
 
   .contenido {
@@ -1146,6 +1219,7 @@
   .contenido p {
     margin: 5px 0 0 0;
   }
+
 
   /*Estilos scroller mapa*/
   .mapaSection {
@@ -1206,7 +1280,10 @@
     width: 30%;
     background-color: rgba(0, 0, 0, 0.877);
   }
-
+  .titulosDesafios{
+    font-family: 'Arp';
+    font-size: 14px;
+  }
 /* Estilo conclusion */
 .bg-animation {
   justify-content: center;
