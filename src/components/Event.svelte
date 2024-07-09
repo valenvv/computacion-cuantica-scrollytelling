@@ -7,7 +7,6 @@
     export let left;
     export let eventID;
     export let description;
-    export let author;
   
     onMount(() => {
       AOS.init();
@@ -20,7 +19,7 @@
   
   <div class="container" class:left={left} class:right={!left} id={eventID} data-aos={left ? 'fade-left' : 'fade-right'}>
     <div class="content">
-      <h2>{date}</h2>
+      <h2 class="date">{date}</h2>
       <h2>{name}</h2>
       <p>{description}</p>
     </div>
@@ -61,6 +60,7 @@
         margin-right: 0; /* Reset de margen derecho para el lado derecho */
       }
     }
+
   
     /* Elementos de diseño para la línea de tiempo */
     .container::after {
@@ -77,6 +77,7 @@
       text-align: justify;
       z-index: 10;
     }
+
   
     .left::after {
       left: 530px;
@@ -87,6 +88,14 @@
     .right::after {
       right: 530px;
       transform: translate(-35%, -50%);
+    }
+
+    .date{
+      font-weight: 100;
+      font-size: 40px;
+      margin: 0;
+      font-family: "Arp-150";
+      color: #afe8ff;
     }
   </style>
   
