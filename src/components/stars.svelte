@@ -23,8 +23,8 @@
       canvas2.height = 100;
       const half = canvas2.width / 2;
       const gradient2 = ctx2.createRadialGradient(half, half, 0, half, half, half);
-      gradient2.addColorStop(0.025, '#fff'); // White color
-      gradient2.addColorStop(0.1, '#fff'); // White color
+      gradient2.addColorStop(0.025, 'rgba(255, 255, 255, 0.8)'); // White color
+      gradient2.addColorStop(0.1, 'rgba(255, 255, 255, 0.6)'); // White color
       gradient2.addColorStop(0.1, 'rgba(255, 255, 255, 0.2)'); // Transparent white
       gradient2.addColorStop(1, 'transparent');
   

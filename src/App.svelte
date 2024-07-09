@@ -18,10 +18,10 @@
 
   /* barras graf */
   let barras = {
-    0: "ionAtrapadoBarras.png",
-    1: "atomoNeutroBarras.png",
-    2: "spinSemiconductorBarras.png",
-    3: "bucleSuperconductorBarras.png",
+    0: "spinSemiconductorBarras.svg",
+    1: "ionAtrapadoBarras.svg",
+    2: "atomoNeutroBarras.svg",
+    3: "bucleSuperconductorBarras.svg",
   }
 
   /* Variables para el scroller */
