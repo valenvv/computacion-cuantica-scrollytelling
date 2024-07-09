@@ -559,6 +559,22 @@
   </div>
   </div>
   </div>
+  <!-- Conclusion -->
+  <div class="bg-animation">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
+    <div id="stars4"></div>
+    <div>
+      <div class="contenido">
+        <h2>Conclusión</h2>
+        <p>
+          El viaje hacia la computación cuántica es un desafío monumental lleno de obstáculos técnicos y científicos. Sin embargo, los avances continuos y la dedicación de la comunidad científica nos acercan cada día más a un futuro donde los ordenadores cuánticos pueden resolver problemas que hoy parecen insuperables. A medida que superamos estos desafíos, nos acercamos a un mundo donde la computación cuántica se convierte en una herramienta poderosa. 
+        </p>
+      </div>
+    </div>
+
+  </div>
 
   <footer class="footer">
     <div class="container">
@@ -1190,6 +1206,37 @@
     width: 30%;
     background-color: rgba(0, 0, 0, 0.877);
   }
+
+/* Estilo conclusion */
+.bg-animation {
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  text-align: center;
+  position: relative; /* Agregar posición relativa para alinear elementos absolutos */
+}
+
+.bg-animation .contenido {
+  position: absolute; /* Posición absoluta para centrar */
+  top: 50%; /* Alineación vertical al centro */
+  left: 50%; /* Alineación horizontal al centro */
+  transform: translate(-50%, -50%); /* Ajuste para centrar exactamente */
+  font-weight: 200;
+  max-width: 900px; /* Ajusta el ancho máximo según tus necesidades */
+  width: 90%; /* Ajusta el ancho del contenedor */
+}
+
+.bg-animation h2 {
+  font-size: 46px;
+  margin-bottom: 10px;
+  color: #ff7195;
+  font-family: "Arp";
+}
+
+.bg-animation p {
+  line-height: 1.6;
+  margin-bottom: 0;
+}
 
   /* Estilos Footer */
   .container{
