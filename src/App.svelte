@@ -405,12 +405,12 @@
   </div> 
 <div class="aplicacion">
   <div class="contenido">
-    <h2>Aplicaciones de la computación cuántica en el machine learning</h2>
-    <p>
-      La computación cuántica ha emergido como una tecnología revolucionaria que promete transformar diversos campos, incluyendo el aprendizaje automático. Una de las aplicaciones más prometedoras es la codificación de datos cuánticos, la cual permite mapear datos clásicos a estados cuánticos, mejorando así el rendimiento de los modelos de aprendizaje automático.
+    <h2>Revolución cuántica en el machine learning: Datos transformados</h2>
+    <p class= "parrafosAppIntro" style="margin-top: 30px; margin-bottom: 20px;"> 
+      La computación cuántica está revolucionando el aprendizaje automático mediante la codificación de datos cuánticos. Esta técnica transforma datos comunes en estados cuánticos, donde un estado cuántico indica si un qubit está en 1, 0, o una combinación de ambos simultáneamente en un instante específico. Esta capacidad única permite a los algoritmos cuánticos procesar y analizar información de manera más rápida y eficiente que los métodos clásicos de aprendizaje automático. 
     </p>
-    <p>
-      En numerosos estudios e investigaciones se han evaluado diversas técnicas de codificación de datos cuánticos. En en este caso, nos centraremos en un estudio que analiza las principales técnicas de codificación: codificación en base, codificación en ángulo y codificación en amplitud. Estas técnicas se aplicaron a varios modelos de aprendizaje automático, incluyendo Regresión Logística, K-Nearest Neighbors (KNN), Support Vector Machines (SVM) y varios métodos de ensamblado como Random Forest, LightGBM, AdaBoost y CatBoost.
+    <p class= "parrafosAppIntro"  style="margin-bottom: 60px;"> 
+      De esta manera, se comparan diferentes modelos de aprendizaje automático, incluyendo Regresión Logística, K-Nearest Neighbors (KNN), Support Vector Machines (SVM) y métodos de ensamblado como Random Forest, LightGBM, AdaBoost y CatBoost.  
     </p>
     <!-- <iframe title="[ Insert title here ]" aria-label="Grouped Columns" id="datawrapper-chart-7wlDE" src="https://datawrapper.dwcdn.net/7wlDE/7/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="369" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();</script> -->
   </div>
@@ -424,57 +424,58 @@
       bind:offset={offset3}
       bind:progress={progress3}
     >
-      <div slot="background" class="image_container">
+      <div slot="background" class="image_containerApp">
         <img src="/images/{graficoApp[index3]}" alt="chart {index3}" class="graficoApp" width="50%" />
       </div>
-      <div slot="foreground" class="foreground_container">
-        <section class="step_foreground">
-          <div class="epi_foreground">
+      <div slot="foreground" class="foreground_containerApp">
+        <section class="step_foregroundApp">
+          <div class="epi_foregroundApp">
             <h3>Presentación</h3>
-            <p> Este gráfico presenta una comparación entre distintos modelos en sus versiones clásicas y cuánticas. El objetivo es visualizar las diferencias en su desempeño bajo las mismas condiciones experimentales. 
-              <p>Rosa: modelos clásicos. Naranja: modelos cuánticos.</p>
-              <p>Modelo actual: KNN1</p>
+            <p class="parrafosApp"> Este gráfico presenta una comparación entre distintos modelos en sus versiones clásicas y cuánticas. El objetivo es visualizar las diferencias en su desempeño bajo las mismas condiciones experimentales. 
+              <p class="colorRosa">Rosa: modelos clásicos.</p>
+              <p class="colorNaranja">Naranja: modelos cuánticos.</p>
+              <p class= "modeloActual">Modelo actual: KNN1</p>
             
           </div>
         </section>
-        <section class="step_foreground">
-          <div class="epi_foreground">
+        <section class="step_foregroundApp">
+          <div class="epi_foregroundApp">
             <h3>¿Qué significan los modelos?</h3>
-            <p>Cada uno de estos modelos/algoritmos es una herramienta matemática que aprende patrones a partir de datos de entrenamiento. Una vez entrenados, estos modelos pueden hacer predicciones o tomar decisiones sobre nuevos datos basándose en los patrones que han aprendido.</p>
+            <p class="parrafosApp">Cada uno de estos modelos/algoritmos es una herramienta matemática que aprende patrones a partir de datos de entrenamiento. Una vez entrenados, estos modelos pueden hacer predicciones o tomar decisiones sobre nuevos datos basándose en los patrones que han aprendido.</p>
           </div>
         </section>
-        <section class="step_foreground">
-          <div class="epi_foreground">
+        <section class="step_foregroundApp">
+          <div class="epi_foregroundApp">
             <h3>¿Qué medimos?</h3>
             <p>precisión</p>
-            <p>
+            <p class="parrafosApp">
               Medimos el rendimiento de los dos tipos de modelos durante el proceso de entrenamiento.
               La precisión nos indica qué tan bien predice el modelo. Es una medida de la exactitud de las predicciones hechas por el modelo en comparación con los valores reales.
             </p>
           </div>
         </section>
-        <section class="step_foreground">
-          <div class="epi_foreground">
+        <section class="step_foregroundApp">
+          <div class="epi_foregroundApp">
             <h3>¿Qué medimos?</h3>
             <p>tiempo de cómputo</p>
-            <p>El tiempo de cómputo indica cuánto tiempo tarda el modelo en completar el proceso de entrenamiento. Esto es importante porque nos ayuda a evaluar la eficiencia del modelo en términos de recursos y tiempo necesarios para entrenarlo. Un menor tiempo de cómputo puede ser preferible si necesitamos resultados rápidos o si estamos trabajando con recursos limitados.
+            <p class="parrafosApp">El tiempo de cómputo indica cuánto tiempo tarda el modelo en completar el proceso de entrenamiento. Esto es importante porque nos ayuda a evaluar la eficiencia del modelo en términos de recursos y tiempo necesarios para entrenarlo. Un menor tiempo de cómputo puede ser preferible si necesitamos resultados rápidos o si estamos trabajando con recursos limitados.
           </p>
           </div>
         </section>
-        <section class="step_foreground">
-          <div class="epi_foreground">
+        <section class="step_foregroundApp">
+          <div class="epi_foregroundApp">
             <h3>Sección {index3 + 1}</h3>
             <p>Gráfico5</p>
           </div>
         </section>
-        <section class="step_foreground">
-          <div class="epi_foreground">
+        <section class="step_foregroundApp">
+          <div class="epi_foregroundApp">
             <h3>Sección {index3 + 1}</h3>
             <p>Gráfico6</p>
           </div>
         </section>
-        <section class="step_foreground">
-          <div class="epi_foreground">
+        <section class="step_foregroundApp">
+          <div class="epi_foregroundApp">
             <h3>Conclusiones</h3>
             <p>Los modelos cuánticos, en general, muestran una mayor precisión que los modelos clásicos, lo que demuestra el potencial de la computación cuántica para mejorar el rendimiento de los modelos de aprendizaje automático.</p>
             <p>Sin embargo, esta mejora en la precisión viene con un aumento en el tiempo de ejecución, lo cual es un trade-off que debe considerarse dependiendo del caso de uso específico.</p>
@@ -493,22 +494,6 @@
       La computación cuántica enfrenta desafíos técnicos significativos que deben ser superados para alcanzar su pleno potencial. 
     </p>
     
-    <!-- <div class="wrapper">
-      <div class="container">
-          <input type="radio" name="slide" id="c1" checked>
-          <label for="c1" class="tarjeta">
-          </label>
-          <input type="radio" name="slide" id="c2" >
-          <label for="c2" class="tarjeta">
-          </label>
-          <input type="radio" name="slide" id="c3" >
-          <label for="c3" class="tarjeta">
-          </label>
-          <input type="radio" name="slide" id="c4" >
-          <label for="c4" class="tarjeta">
-          </label>
-      </div>  -->
-
       <div class="lista-desafios">
         <div class="desafio">
           <div class="numero">1</div>
@@ -796,42 +781,57 @@
   }
 
  
-  /* Estilos para el scroller */
+  /* Estilos para el scroller App */
   .graficoApp {
   position: relative;
   width: 80%;
 }
-  .foreground_container {
+  .foreground_containerApp {
     pointer-events: none;
     padding-left: 50%;
+    overflow-x: hidden;
+    max-width: 100%;
+    width: 60%;
+   
   }
-
-  .step_foreground {
-    
+  .image_containerApp{
+    /* background-color: #3D46F2; */
+    max-width: 100%;
+    display: flex;
+    align-items: center; 
+    width: 90%;
+    margin-left: 150px;
+    height: 100vh;
+    transform: translate(-25%, -10%);
+  }
+  .step_foregroundApp {
+    /* background-color: #3D46F2; */
     display: flex;
     justify-content: end;
     align-items: center;
     height: 100vh;
+    width: 80vh;
+    max-width: 100%;
     border: 1px solid rgba(0, 0, 0, 0.4);
     color: white;
     padding: 1em;
-    margin: 0 0 2em 0;
+    margin: 0 8em 2em 0;
+    transform: translateX(15%);
   }
-  .epi_foreground {
-    transform: translateX(30%);
+  .epi_foregroundApp {
     padding: 20px;
-    max-width: 400px;
-    background-color: rgba(125, 125, 125, 0.5);
+    height: 50%;
+    width: 100%;
+    background-color: rgba(44, 44, 44, 0.5);
     font-weight: 200;
+    text-align: left; 
   }
 
-  .image_container {
-    display: flex;
-    margin-left: 150px;
-    align-items: center;
-    height: 100vh;
+  .modeloActual{
+    color:#CB9BFF;
+    font-weight: 300;
   }
- 
+   
   /* Estilos para la sección de historia */
   .historia {
     display: flex;
@@ -881,11 +881,7 @@
         margin-left: -3px;
         z-index: 8;
     }
-    .timeline .events .date {
-        font-family: 'Noto Sans', sans-serif; /* Cambia 'Noto Sans' por la fuente que desees utilizar */
-        /* Otros estilos aquí si los necesitas */
-    }
-
+   
     @media screen and (max-width: 600px) {
         .timeline::after {
             left: 31px;
@@ -919,7 +915,7 @@
     color: #ffffff;
   }
 
-  .aplicacion p {
+  .parrafosAppIntro {
   font-size: 18px;
   line-height: 1.6;
   margin-bottom: 0;
@@ -956,78 +952,9 @@
       line-height: 1.6;
       margin-bottom: 0;
     }
-    /* intento de tarjetas */
-    
-    .wrapper {
-      box-sizing: border-box;
-      width: 80%;
-      height: 90vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-  }
-
-  .container {
-    
-      height: 400px;
-      display: flex;
-      flex-wrap: nowrap;
-      justify-content: center;
-  }
-
-  .tarjeta {
-      width: 80px;
-      border-radius: .75rem;
-      background-size: cover;
-      cursor: pointer;
-      overflow: hidden;
-      border-radius: 2rem;
-      margin: 0 10px;
-      display: flex;
-      align-items: flex-end;
-      transition: .6s cubic-bezier(.28,-0.03,0,.99);
-      /* filter: grayscale(1) brightness(0.5);  */
-  }
-
-  input {
-    display: none;
-  }
-
-  input:checked + label {
-    width: 700px;
-    /* filter: grayscale(0) brightness(1); */
-  }
-
-  input:not(:checked) + .tarjeta[for="c1"],
-  input:not(:checked) + .tarjeta[for="c2"],
-  input:not(:checked) + .tarjeta[for="c3"],
-  input:not(:checked) + .tarjeta[for="c4"] {
-    /* background: linear-gradient(to bottom, #20007A, #461DBB); */
-    background: linear-gradient(to bottom, #20007A, #5439ff);
-  }
+ 
 
 
-
-  .tarjeta[for="c1"] {
-    
-    /* background: linear-gradient(to bottom, #2A0D39, #711D76); */
-    background-image: url('public/images/deco2.png');
-    background-position: center;
-  }
-  .tarjeta[for="c2"] {
-    /* background: linear-gradient(to bottom, #20007A, #4E22CD); */
-    background-image: url('public/images/erroresCuanticos2.png');
-    background-position: center;
-  }
-  .tarjeta[for="c3"] {
-    background-image: url('public/images/Escalabilidad.png');
-    background-position: center; 
-
-   }
-  .tarjeta[for="c4"] {
-    background: linear-gradient(to bottom, #20007A, #4E22CD);
-  }
-     
   main{
     background-image: url("images/fondo3.png");
     background-size: 100vw;
@@ -1118,20 +1045,21 @@
     height: 90vh;
   }
   .foreground_containerm {
-    align-items: center;
+    align-items: left;
   }
   .step_foregroundm {
+    /* background-color: #d0a3ff; */
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 90vh;
+    height: 60vh;
     color: white;
     padding: 1em;
     margin: 0 0 10em 0;
   }
   .epi_foregroundm {
     padding: 20px;
-    max-width: 120px;
+    width: 30%;
     background-color: rgba(0, 0, 0, 0.877);
   }
 
