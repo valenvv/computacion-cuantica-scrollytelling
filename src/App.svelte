@@ -244,8 +244,8 @@
 
   <div class="qubits ">
     <div class="contenido">
-      <h2>Qubit: La unidad básica de información</h2>
-      <p>
+      <h2 data-aos="fade-up" data-aos-anchor-placement="top-center">Qubit: La unidad básica de información</h2>
+      <p >
         Los qubits son la unidad básica de información en la computación cuántica. A diferencia de los bits clásicos, 
         los qubits pueden representar tanto 0 como 1 al mismo tiempo, gracias a la superposición cuántica. 
         A continuación, se describen los diferentes tipos de qubits utilizados en esta disciplina:
@@ -542,17 +542,17 @@
 
 <style>
   .texto {
-    font-size: 18px;
     font-weight: 200;
     line-height: 1.6;
     position: relative;
     text-align: left;
+    margin-top: 0.5em;
   }
   .subtitulo {
     font-size: 36px;
-    margin-bottom:-10px;
+    margin-bottom: 0;
     position: relative;
-    text-align: center;
+    text-align: left;
   }
 
   .charts {
@@ -664,7 +664,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: left;
   }
 
 .contenido p {
@@ -675,12 +675,6 @@
     z-index: 1;
 }
 
-.contenido img { 
-    max-width: 100%;
-    width: 600px;
-    z-index: 1;
-    margin: 0 auto;
-}
 
 /* Imagen dentro de la grilla */
 .section img {
@@ -698,16 +692,7 @@
 .section p {
   text-align: left;
 }
- /* Estilos específicos para la sección de Superposición */
-  .Superpos-section .contenido {
-    margin-bottom: 0;
-  }
 
-
-  /* Estilos específicos para la sección de Entrelazamiento */
-  .entrelazamiento-section .contexto-entrelazamiento {
-    margin-bottom: 0;
-  }
 
   /* Estilos para la sección de Qubits */
   .qubits {
@@ -716,7 +701,6 @@
     align-items: center;
     height: 70vh;
     text-align: center;
-    margin-top: 90px; /*adapt fondo*/
   }
 
   .qubits .contenido {
@@ -760,7 +744,7 @@
 
   #cards {
     width: 80%;
-    margin: 5% auto;
+    margin: 0 auto;
     display: grid;
       --numcards: 4;
       view-timeline-name: --cards-element-scrolls-in-body;
@@ -781,30 +765,34 @@
       align-items: center;
       text-align: center;
       margin: auto;
+      font-weight: 200;
   }
   .ion-atrapado {
     margin-bottom: 10px;
   }
 
-  /* Basic styling for cards */
   ul {
       list-style-type: none;
       padding: 0;
   }
 
   li {
-      margin: 20px 0;
+      margin: 00px 0;
 
   }
 
   .card__content {
-      padding: 20px;
+      padding: 20px 70px;
       background: #2B2B2D;
-      border: 20px solid #202020;
+      border: 40px solid #202020;
       border-radius: 8px;
+      max-width: max-content;
   }
   .card_title{
     color:#CB9BFF;
+    font-weight: 750;
+    font-size: 30px;
+    font-style: oblique;
   }
 
  
@@ -834,6 +822,7 @@
     padding: 20px;
     max-width: 400px;
     background-color: rgba(125, 125, 125, 0.5);
+    font-weight: 200;
   }
 
   .image_container {
@@ -878,6 +867,7 @@
         position: relative;
         max-width: 1200px;
         margin: 0 auto;
+        font-weight: 200;
     }
 
     .timeline::after {
@@ -920,6 +910,7 @@
   justify-content: center;
   align-items: center;
   max-width: 800px;
+  font-weight: 200;
   }
 
   .aplicacion h2 {
@@ -962,7 +953,6 @@
     }
 
     .desafios p {
-      font-size: 18px;
       line-height: 1.6;
       margin-bottom: 0;
     }
