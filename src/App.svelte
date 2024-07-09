@@ -199,8 +199,8 @@
   </div>
 
   <div class="introduccion section">
-    <p>
-      La computación cuántica es un campo de estudio que aplica los principios
+    <p class="texto">
+      La <strong>computación cuántica</strong> es un campo de estudio que aplica los principios
       de la mecánica cuántica, una rama de la física que describe el
       comportamiento de las partículas a nivel subatómico, a la informática. A
       diferencia de la computación clásica, que utiliza bits que pueden estar en
@@ -245,9 +245,8 @@
   <div class="qubits ">
     <div class="contenido">
       <h2 data-aos="fade-up" data-aos-anchor-placement="top-center">Qubit: La unidad básica de información</h2>
-      <p >
-        Los qubits son la unidad básica de información en la computación cuántica. A diferencia de los bits clásicos, 
-        los qubits pueden representar tanto 0 como 1 al mismo tiempo, gracias a la superposición cuántica. 
+      <p>
+        A diferencia de los bits clásicos, los qubits pueden representar tanto 0 como 1 al mismo tiempo, gracias a la superposición cuántica. 
         A continuación, se describen los diferentes tipos de qubits utilizados en esta disciplina:
         
       </p>
@@ -297,7 +296,7 @@
 
 <div class="qubits">
   <div class="contenido">
-    <p> La capacidad de entrelazar múltiples qubits simultáneamente es crucial para el rendimiento y la potencia de los sistemas cuánticos. Cuantos más qubits se puedan entrelazar simultáneamente, mayor será la capacidad del sistema para resolver problemas complejos y realizar cálculos que están fuera del alcance de las computadoras clásicas. Por lo tanto, la cantidad de qubits que se pueden entrelazar es un indicador clave del potencial y la escalabilidad de una tecnología de qubits.</p>
+    <p> La capacidad de entrelazar múltiples qubits simultáneamente es crucial para el rendimiento y la potencia de los sistemas cuánticos. Cuantos más qubits se puedan entrelazar simultáneamente, mayor será la capacidad del sistema para resolver problemas complejos y realizar cálculos que están fuera del alcance de las computadoras clásicas. </p>
     <p>A continuación, se presenta una comparación de la cantidad de qubits que se pueden entrelazar simultáneamente en diferentes sistemas de qubits:</p>
   </div>
 </div>
@@ -667,6 +666,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: left;
+    padding-bottom: 1em;
   }
 
 .contenido p {
@@ -1031,7 +1031,7 @@
   }
      
   main{
-    background-image: url("images/fondo3.png");
+    /* background-image: url("images/fondo3.png"); */
     background-size: 100vw;
     margin: 0 0;
     z-index: 2;
@@ -1060,7 +1060,6 @@
     border-radius: 50%;
     background-color: #4f138f; /* Color del fondo del círculo */
     color: white; /* Color del texto del número */
-    font-size: 1.5em;
   }
 
   .contenido {

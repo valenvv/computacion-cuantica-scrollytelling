@@ -19,7 +19,9 @@
   src: url(/public/fonts/ARPDisplay-240.ttf);
 
 }
-
+p{
+  font-size: 18px;
+}
 body {
   /* background-color: rgb(0, 0, 0); */
   color: rgb(255, 255, 255);
