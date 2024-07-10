@@ -6,10 +6,9 @@ Este proyecto implementa una aplicación web utilizando Svelte y Vite, enfocada 
 ## Estructura del Proyecto
 El proyecto está organizado de la siguiente manera:
 
-- **public/**: Contiene los recursos públicos del proyecto, como imágenes y archivos estáticos.
+- **public/**: Contiene los recursos públicos del proyecto, como imágenes, sonidos, etc.
 - **src/**: Contiene el código fuente de la aplicación.
   - **components/**: Componentes de Svelte utilizados en la aplicación.
-  - **stores/**: Almacenes de datos gestionados por Svelte.
   - **App.svelte**: Componente principal de la aplicación.
 - **index.html**: Archivo HTML principal.
 - **jsconfig.json**: Configuración de JavaScript.
@@ -29,12 +28,12 @@ Para iniciar el proyecto en un entorno de desarrollo, ejecute:
 ```bash
 npm run dev
 ```
-Esto iniciará un servidor de desarrollo y podrá acceder a la aplicación en `http://localhost:3000`.
+Esto iniciará un servidor de desarrollo y podrá acceder a la aplicación.
 
 ## Características y Funcionalidades
 
 ### 1. Filtrado de Datos con `svelte-scroller`
-El módulo `svelte-scroller` se utiliza para filtrar datos en función del desplazamiento del usuario. Esto permite una visualización de datos dinámica y reactiva que se adapta a la interacción del usuario.
+El módulo `svelte-scroller` se utiliza para filtrar datos en función del desplazamiento del usuario. Esto permite una visualización de datos dinámica y reactiva que se adapta a la interacción del usuario. Para hacer uso del mismo se ha partido de la plantilla brindada en clase.
 
 
 ### 2. Animaciones con AOS (Animate On Scroll Library)
