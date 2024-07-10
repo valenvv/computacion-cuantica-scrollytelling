@@ -283,7 +283,7 @@
           <div class="card__content">
             <h2 class="card_title">Ion Atrapado</h2>
             <p> Son partículas atómicas cargadas que se manipulan usando campos electromagnéticos. Destacan por su estabilidad y alta temperatura de operación. Sin embargo, su desventaja principal es el tiempo necesario para manipular sus estados. </p>
-            <img src="public\images\trapped Ion.png" alt="Ion atrapado" class="ion-atrapado">
+            <img src="../images/trapped Ion.png" alt="Ion atrapado" class="ion-atrapado">
           </div>
       </li>
       <li class="card" style="--index: 2;">
@@ -292,7 +292,7 @@
             <p>
               Son átomos individuales que se enfrían y atrapan en campos generados por láseres. Se destacan por su potencial escalabilidad y por la posibilidad de controlar individualmente cada qubit. Sin embargo, enfrentan desafíos como mantener muy bajas temperaturas para su funcionalidad y la complejidad de los sistemas de control.
             </p>
-            <img src="public\images\atomo neutro.png" alt="Atomo neutro" class="atomo-neutro">
+            <img src="../images/atomo neutro.png" alt="Atomo neutro" class="atomo-neutro">
           </div>
       </li>
       <li class="card" style="--index: 3;">
@@ -304,7 +304,7 @@
               microondas o campos magnéticos. Se destacan por sus largos tiempos de estabilidad. Sin embargo, controlar el entorno del espín es considerado un
               desafío.
             </p>
-            <img src="public\images\Spin Semiconductor.png" alt="Spin Semiconductor" class="spin-semiconductor">
+            <img src="../images/Spin Semiconductor.png" alt="Spin Semiconductor" class="spin-semiconductor">
           </div>
       </li>
       <li class="card" style="--index: 4;">
@@ -312,7 +312,7 @@
           <h2 class="card_title">Bucle Superconductor</h2>
           <p>Utilizan circuitos hechos de materiales superconductores que conducen electricidad sin resistencia a bajas temperaturas. Los estados cuánticos se representan mediante diferentes estados de corriente en el bucle. Se destacan por su tiempo de estabilidad prolongados y compatibilidad con la tecnología de circuitos superconductores. Desafíos incluyen mantener temperaturas extremadamente bajas y la complejidad en los sistemas de control.</p>
 
-          <img src="public\images\Bucles Superconductores.png" alt="bucle superconductor" class="bucle-super">
+          <img src="../images/Bucles Superconductores.png" alt="bucle superconductor" class="bucle-super">
         </div>
       </li>
     </ul>
@@ -1131,50 +1131,16 @@
   margin-bottom: 0;
   }
 
-    /*Estilos para la sección de desafios*/
-
-    .aplicacion {
-  margin-top: 200px; /*Adapt fondo*/
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: auto;
-  text-align: center;
-  }
-
-  .aplicacion .contenido {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  max-width: 900px;
-  font-weight: 200;
-  }
-
-  .aplicacion h2 {
-    font-size: 46px;
-    margin-bottom: 10px;
-    color: #ffffff;
-  }
-
-  .parrafosAppIntro {
-  font-size: 18px;
-  line-height: 1.6;
-  margin-bottom: 0;
-  }
-
   /*Estilos para la sección de desafios*/
   
     .desafios {
-      margin-top: 360px; /*Adapt fondo*/
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       height: auto;
       text-align: center;
-      margin-bottom: 10%;
+      margin: 100px 0 0 0;
     }
 
     .desafios .contenido {
@@ -1214,7 +1180,8 @@
     gap: 20px;
     justify-content: flex-start;
     margin-top: 2%;
-    margin-bottom: 160px;
+    margin-bottom: 100px;
+
   }
 
   .desafio {
@@ -1261,7 +1228,7 @@
     align-items: center;
     height: 60vh;
     text-align: center;
-    margin-top: 200px;
+    margin-top: 100px;
     
   }
   .mapaSection .contenido {
