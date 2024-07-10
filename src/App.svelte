@@ -266,6 +266,7 @@
   </div>
 
   <div class="qubits ">
+    <div class="circle-top1"></div> <!-- Parte superior circular con degradado -->
     <div class="contenido">
       <h2 data-aos="fade-up">Qubit: La unidad básica de información</h2>
       <p >
@@ -376,6 +377,7 @@
   </div>
 
   <div class="historia">
+    <div class="circle-top"></div> <!-- Parte superior circular con degradado -->
     <div class="contenido">
       <h2>Historia y evolución</h2>
       <h3>Hitos importantes en la computación cuántica</h3>
@@ -824,6 +826,18 @@
     align-items: center;
     height: 70vh;
     text-align: center;
+    position: relative;
+  }
+  .circle-top1{
+    width: 100%;
+    height: 100%; /* Altura de la parte superior circular */
+    background-image: linear-gradient(to bottom, #3d3d3d60,rgba(61, 70, 242, 0.02)); /* Degradado interno */
+    border-radius: 50% 50% 0 0 / 70% 70% 0 0;
+   position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0; /* Detrás del contenido */
+    
   }
 
   .qubits .contenido {
@@ -833,7 +847,7 @@
     align-items: center;
     max-width: 900px;
     font-weight: 200;
-
+  
   }
 
   .qubits h2 {
@@ -1017,7 +1031,10 @@
     height: 60vh;
     text-align: center;
     margin-top: 200px;
-    
+    margin-bottom: 0%;
+    position: relative; /* Para posicionar el degradado interno */
+    overflow: hidden; /* Para ocultar el degradado que sobresalga */
+    transform: translateY(5.8%);
   }
 
   .historia .contenido {
@@ -1026,6 +1043,9 @@
     justify-content: center;
     align-items: center;
     max-width: 900px;
+    z-index: 1; /* Asegura que el contenido esté sobre el degradado */
+    position: relative; /* Para asegurar el z-index funcione */
+
   }
 
   .historia h2 {
@@ -1038,11 +1058,25 @@
     margin: 20px;
 
   }
+  .circle-top {
+    width: 100%;
+    height: 100%; /* Altura de la parte superior circular */
+    background-color: #3d46f20c;
+    background-image: linear-gradient(to bottom, #3d46f210,rgba(38, 48, 231, 0.08)); /* Degradado interno */
+    border-radius: 50% 50% 0 0 / 70% 70% 0 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0; /* Detrás del contenido */
+    
+  }
 
   /*Estilos del timeline*/
   .timeline {
+    background-image: linear-gradient(to bottom, rgba(38, 48, 231, 0.089),rgba(7, 9, 52, 0.02)); /* Degradado interno */
         position: relative;
-        max-width: 1200px;
+        max-width: 100%;
+        margin-top: 0%;
         margin: 0 auto;
         font-weight: 200;
     }
@@ -1167,7 +1201,7 @@
 
 
   main{
-    background-image: url("images/fondofin (4).svg"); 
+    /* background-image: url("images/fondofin (4).svg");  */
     background-size: 100vw;
     margin: 0 0;
     z-index: 2;

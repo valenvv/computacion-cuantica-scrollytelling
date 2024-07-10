@@ -81,13 +81,13 @@
   
     .left::after {
       left: 530px;
-      transform: translate(25%, -50%);
+      transform: translate(90%, -50%);
     
     }
     
     .right::after {
       right: 530px;
-      transform: translate(-35%, -50%);
+      transform: translate(-95%, -50%);
     }
 
     .date{
