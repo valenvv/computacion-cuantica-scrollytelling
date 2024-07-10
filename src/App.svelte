@@ -438,7 +438,7 @@
   </div> 
   <div class="aplicacion">
     <div class="imagen-fondo">
-      <img src="images/firulete.png" alt="Background Image" />
+      <img src="../images/firulete.png" alt="Background Image" />
     </div>
     <div class="contenido">
       <h2>Revolución cuántica en el machine learning: Datos transformados</h2>
@@ -545,7 +545,7 @@
   
   <div class="desafios">
     <div class="imagen-fondo1">
-      <img src="images/firulete1.png" alt="Background Image" />
+      <img src="../images/firulete1.png" alt="Background Image" />
     </div>
     <div class="contenido">
       <h2>Desafíos actuales y futuro de la computación cuántica</h2>
@@ -582,7 +582,7 @@
     </div>
     </div>
     <div class="imagen-fondo1">
-      <img src="/images/firulete2.png" alt="Background Image" />
+      <img src="../images/firulete2.png" alt="Background Image" />
     </div>
   <!-- Conclusion -->
   <div class="bg-animation">
