@@ -1167,7 +1167,7 @@
 
 
   main{
-    /* background-image: url("images/fondo3.png"); */
+    background-image: url("images/fondofin (4).svg"); 
     background-size: 100vw;
     margin: 0 0;
     z-index: 2;
@@ -1181,7 +1181,7 @@
     gap: 20px;
     justify-content: flex-start;
     margin-top: 2%;
-  
+    margin-bottom: 160px;
   }
 
   .desafio {
@@ -1288,7 +1288,7 @@
 .bg-animation {
   justify-content: center;
   align-items: center;
-  height: 70vh;
+  height: 100vh;
   text-align: center;
   position: relative; /* Agregar posición relativa para alinear elementos absolutos */
 }
@@ -1299,8 +1299,8 @@
   left: 50%; /* Alineación horizontal al centro */
   transform: translate(-50%, -50%); /* Ajuste para centrar exactamente */
   font-weight: 200;
-  max-width: 900px; /* Ajusta el ancho máximo según tus necesidades */
-  width: 90%; /* Ajusta el ancho del contenedor */
+  max-width: 900px; 
+  width: 90%; 
 }
 
 .bg-animation h2 {
