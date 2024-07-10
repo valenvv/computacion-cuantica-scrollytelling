@@ -40,9 +40,8 @@
     2: "LogisticReg1.png",
     3: "AdaBoost1.png",
     4: "CatBoost1.png",
-    5: "AdaBoost1.png",
-    6: "LightGBM1.png",
-    7: "RandomForest1.png"
+    5: "LightGBM1.png",
+    6: "RandomForest1.png"
   }
 
   /* Variables para el scroller del mapa */
@@ -222,7 +221,7 @@
   </audio>
   
   <div class="introduccion section">
-    <p data-aos="fade-up" class="texto">
+    <p class="texto">
       La <strong>computación cuántica</strong> es un campo de estudio que aplica los principios
       de la mecánica cuántica, una rama de la física que describe el
       comportamiento de las partículas a nivel subatómico, a la informática. A
@@ -370,12 +369,6 @@
   </Scroller>
   </div>
 
-  <div class="qubits">
-    <div class="contenido">
-      <p> Las diferentes plataformas de qubits varían en su capacidad de entrelazado, lo que refleja tanto sus fortalezas como sus desafíos. Esta diversidad de enfoques subraya el potencial de la computación cuántica y la posibilidad de desarrollos futuros que podrían superar las tecnologías actuales. La colaboración y el avance continuo serán claves para aprovechar plenamente estas capacidades y avanzar en la computación cuántica. </p>
-    </div>
-  </div>
-
   <div class="historia">
     <div class="circle-top"></div> <!-- Parte superior circular con degradado -->
     <div class="contenido">
@@ -444,6 +437,9 @@
     </Scroller>
   </div> 
   <div class="aplicacion">
+    <div class="imagen-fondo">
+      <img src="public\images\firulete.png" alt="Background Image" />
+    </div>
     <div class="contenido">
       <h2>Revolución cuántica en el machine learning: Datos transformados</h2>
       <p class= "parrafosAppIntro" style="margin-top: 30px; margin-bottom: 20px;"> 
@@ -548,6 +544,9 @@
     
   
   <div class="desafios">
+    <div class="imagen-fondo1">
+      <img src="public\images\firulete1.png" alt="Background Image" />
+    </div>
     <div class="contenido">
       <h2>Desafíos actuales y futuro de la computación cuántica</h2>
       <!-- <p>
@@ -582,6 +581,9 @@
     </div>
     </div>
     </div>
+    <div class="imagen-fondo1">
+      <img src="public\images\firulete2.png" alt="Background Image" />
+    </div>
   <!-- Conclusion -->
   <div class="bg-animation">
     <div id="stars"></div>
@@ -605,9 +607,13 @@
         <div class="footer-col">
           <h4>Visualzación de Datos | Entrega Final</h4>
           <ul>
-            <li><a href="#">Universidad Torcuato Di Tella</a></li>
-            <li><a href="#">Caterina Villegas</a></li>
-            <li><a href="#">Valentina Vitetta</a></li>
+            <li><a href="https://www.utdt.edu/">Universidad Torcuato Di Tella</a></li>
+            <li><a href="https://www.utdt.edu/ver_contenido.php?id_contenido=19866&id_item_menu=31534">Licenciatura en Tecnología Digital</a></li>
+            <li><a href="#">Volver al Inicio</a></li>
+
+
+            
+
 
           </ul>
         </div>
@@ -620,17 +626,19 @@
             <li><a target="_blank" href="https://www.jsr.org/hs/index.php/path/article/download/2236/975/14010">Comparación entre Qubits</a></li>
             <li><a target="_blank" href="https://quantumpedia.uk/a-brief-history-of-quantum-computing-e0bbd05893d0#:~:text=The%20Theoretical%20Foundations%20of%20Quantum,Quantum%20Computers%20(2000%E2%80%932021)">Historia de la computación Cuántica</a></li>
             <li><a target="_blank" href="https://www.researchgate.net/publication/336341290_Trends_in_Quantum_Computing">Tendencias en la Computación Cuántica</a></li>
-            <li><a target="_blank" href="https://www.ibm.com/es-es/topics/quantum-computing">Computación Cuántica en el Machine Learning</a></li>
-            <li><a target="_blank" href="https://www.ibm.com/es-es/topics/quantum-computing">Desafíos de la Computación Cuántica</a></li>
+            <li><a target="_blank" href="https://arxiv.org/pdf/2311.10375">Computación Cuántica en el Machine Learning</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4>follow us</h4>
+          <h4>Contacto</h4>
           <div class="social-links">
-            <a href="#"><i class="fab fa-github"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/valenvv/vd-tp-final"><i class="fab fa-github"></i></a>
           </div>
+          <ul>
+            <li><a target="_blank" href="https://www.linkedin.com/in/caterina-villegas-6a623623b/">Caterina Villegas</a></li>
+            <li><a target="_blank" href="https://www.linkedin.com/in/valentina-vitetta/">Valentina Vitetta</a></li>
+          </ul>
         </div>
       </div>
     </div>
@@ -655,7 +663,7 @@
   .charts {
     width: 40vw;
   }
-  .section { /*si no usamos secciones borrar */
+  .section { 
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
@@ -713,7 +721,7 @@
   }
 
   .sub_principio{
-    
+    font-size: 35px;
     font-weight: normal;
     text-align: center;
     justify-content: center;
@@ -724,7 +732,7 @@
 
   .sub_principioNombres{
     font-weight: lighter;
-    font-size: medium;
+    font-size: 20px;
     text-align: center;
     justify-content: center;
     position: relative;
@@ -740,6 +748,7 @@
     position: relative;
     margin: 0;
     z-index: 1;
+    color: #dcc2f8;
   }
 
 
@@ -779,7 +788,7 @@
   /* Imagen dentro de la introducción */
   .introduccion img {
       max-width: 40%;
-      width: 100px;
+      width: 70px;
       margin: 0 auto;
       border-radius: 50px;
   }
@@ -809,14 +818,14 @@
 }
 
 .Superpos-section img{
-  max-width: 70%;
+  max-width: 50%;
   width:400px;
 }
 
-/* Estilo para los párrafos */
-.section p {
-  text-align: left;
-}
+  /* Estilo para los párrafos */
+  .section p {
+    text-align: left;
+  }
 
 
   /* Estilos para la sección de Qubits */
@@ -829,10 +838,11 @@
     position: relative;
   }
   .circle-top1{
+    margin-top: 3%;
     width: 100%;
     height: 100%; /* Altura de la parte superior circular */
     background-image: linear-gradient(to bottom, #3d3d3d60,rgba(61, 70, 242, 0.02)); /* Degradado interno */
-    border-radius: 50% 50% 0 0 / 70% 70% 0 0;
+    border-radius: 0% 80% 0 0% / 100% 30% 0 0;
    position: absolute;
     top: 0;
     left: 0;
@@ -936,6 +946,7 @@
   .foreground_container {
     pointer-events: none;
     padding-left: 50%;
+    margin-bottom: 10%;
   }
   .step_foreground {
     display: flex;
@@ -947,10 +958,17 @@
     padding: 1em;
     margin: 0 0 2em 4em;
   }
+
+  .step_foreground h3{
+    font-family: "Arp";
+    font-size: 20px;
+  }
+
   .epi_foreground {
     padding: 20px;
     max-width: 300px;
     background-color:rgba(44, 44, 44, 0.5);
+    border-radius: 10px;
   }
   .image_container {
     display: flex;
@@ -958,6 +976,7 @@
     align-items: left;
     margin-left: 10%;
     height: 100vh;
+    transform: translate(0%, -8%);
   }
 
  
@@ -1013,7 +1032,7 @@
     text-align: left; 
   }
   .titulosApp{
-    font-size: 15px; /*PREGUNTAR */
+    font-size: 20px; /*PREGUNTAR */
     font-family: 'Arp';
   }
 
@@ -1029,7 +1048,7 @@
     align-items: center;
     height: 60vh;
     text-align: center;
-    margin-top: 200px;
+    margin-top: 0;
     margin-bottom: 0%;
     position: relative; /* Para posicionar el degradado interno */
     overflow: hidden; /* Para ocultar el degradado que sobresalga */
@@ -1054,15 +1073,15 @@
 
   .historia h3 {
     font-size: 26px;
-    margin: 20px;
+    margin: 0;
 
   }
   .circle-top {
     width: 100%;
     height: 100%; /* Altura de la parte superior circular */
     background-color: #3d46f20c;
-    background-image: linear-gradient(to bottom, #3d46f210,rgba(38, 48, 231, 0.08)); /* Degradado interno */
-    border-radius: 50% 50% 0 0 / 70% 70% 0 0;
+    background-image: linear-gradient(to bottom, #3d46f210,rgb(7, 8, 27)); /* Degradado interno */
+    border-radius: 30% 30% 0 0 / 80% 80% 0 0;
     position: absolute;
     top: 0;
     left: 0;
@@ -1072,7 +1091,7 @@
 
   /*Estilos del timeline*/
   .timeline {
-    background-image: linear-gradient(to bottom, rgba(38, 48, 231, 0.089),rgba(7, 9, 52, 0.02)); /* Degradado interno */
+    background-image: linear-gradient(to bottom, rgb(7, 8, 27),rgba(7, 9, 52, 0.02)); /* Degradado interno */
         position: relative;
         max-width: 100%;
         margin-top: 0%;
@@ -1101,13 +1120,13 @@
   /*Estilos para la sección de desafios*/
 
   .aplicacion {
-  margin-top: 200px; /*Adapt fondo*/
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: auto;
-  text-align: center;
+    background: linear-gradient(to bottom, #0A122D 5%, #000000 18%); /* Degradado más corto *  margin-top: 200px; /*Adapt fondo*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    text-align: center;
   }
 
   .aplicacion .contenido {
@@ -1131,6 +1150,23 @@
   margin-bottom: 0;
   }
 
+  .imagen-fondo {
+    
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+    
+  }
+  .imagen-fondo img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  
+}
+
   /*Estilos para la sección de desafios*/
   
     .desafios {
@@ -1141,7 +1177,25 @@
       height: auto;
       text-align: center;
       margin: 100px 0 0 0;
+      width: 100%;
     }
+
+    .imagen-fondo1 {
+    
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+    
+  }
+  .imagen-fondo1 img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  
+}
 
     .desafios .contenido {
       display: flex;
@@ -1180,7 +1234,7 @@
     gap: 20px;
     justify-content: flex-start;
     margin-top: 2%;
-    margin-bottom: 100px;
+    margin-bottom: 90px;
 
   }
 
@@ -1279,6 +1333,7 @@
     padding: 20px;
     width: 30%;
     background-color: rgba(0, 0, 0, 0.877);
+    border-radius: 10px;
   }
   .titulosDesafios{
     font-family: 'Arp';
@@ -1288,7 +1343,8 @@
 .bg-animation {
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 50vh;
+  padding-bottom: 10%;
   text-align: center;
   position: relative; /* Agregar posición relativa para alinear elementos absolutos */
 }
@@ -1304,7 +1360,7 @@
 }
 
 .bg-animation h2 {
-  font-size: 46px;
+  font-size: 42px;
   margin-bottom: 10px;
   color: #ff7195;
   font-family: "Arp";
