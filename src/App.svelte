@@ -266,6 +266,9 @@
 
   <div class="qubits ">
     <div class="circle-top1"></div> <!-- Parte superior circular con degradado -->
+    <div class="imagen-fondo2">
+      <img src="../images/firulete3.png" alt="Background Image" />
+    </div>
     <div class="contenido">
       <h2>Qubit: La unidad básica de información</h2>
       <p >
@@ -828,27 +831,43 @@
   }
 
 
-  /* Estilos para la sección de Qubits */
-  .qubits {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 70vh;
-    text-align: center;
-    position: relative;
-  }
-  .circle-top1{
+/* Estilos para la sección de Qubits */
+.qubits {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  text-align: center;
+  position: relative;
+  overflow: hidden; /* Asegura que los elementos hijos no sobresalgan del contenedor */
+}
+
+.imagen-fondo2 {
+  position: absolute; /* Asegura que la imagen de fondo se posicione correctamente dentro del contenedor */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0; /* Envía la imagen de fondo detrás del contenido */
+}
+
+.imagen-fondo2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Asegura que la imagen cubra todo el contenedor sin deformarse */
+}
+/* .circle-top1{
     margin-top: 3%;
     width: 100%;
-    height: 100%; /* Altura de la parte superior circular */
-    background-image: linear-gradient(to bottom, #3d3d3d60,rgba(61, 70, 242, 0.02)); /* Degradado interno */
+    height: 100%;
+    background-image: linear-gradient(to bottom, #3d3d3d60,rgba(61, 70, 242, 0.02)); 
     border-radius: 0% 80% 0 0% / 100% 30% 0 0;
    position: absolute;
     top: 0;
     left: 0;
-    z-index: 0; /* Detrás del contenido */
+    z-index: 0; 
     
-  }
+  } */
 
   .qubits .contenido {
     display: flex;
@@ -857,6 +876,7 @@
     align-items: center;
     max-width: 900px;
     font-weight: 200;
+    z-index: 10;
   
   }
 
@@ -1025,7 +1045,7 @@
     padding: 20px;
     height: 50%;
     width: 100%;
-    background-color: rgba(30, 30, 30, 0.5);
+    background-color: rgba(56, 56, 56, 0.461);
     /* border: 1px solid #CB9BFF; */
     border-radius: 10px;
     font-weight: 200;
