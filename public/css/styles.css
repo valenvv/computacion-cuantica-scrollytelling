@@ -16,12 +16,12 @@
 
 @font-face {
   font-family: 'Arp';
-  src: url(/public/fonts/ARPDisplay-240.ttf);
+  src: url(../fonts/ARPDisplay-240.ttf);
 }
 
 @font-face {
   font-family: 'Arp-150';
-  src: url(/public/fonts/ARPDisplay-150.ttf);
+  src: url(../fonts/ARPDisplay-150.ttf);
 }
 p{
   font-size: 18px;

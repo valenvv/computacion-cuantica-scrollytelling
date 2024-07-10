@@ -211,7 +211,7 @@
     <div class="sub_principioPlay">
       <p>Viví la experiencia completa</p>
       <button class="play" on:click={togglePlayback}>
-        <img src="images/play.png" alt="play" width="30px">
+        <img src="../images/play.png" alt="play" width="30px">
       </button>
     </div>
     <Stars />
