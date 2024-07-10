@@ -1046,13 +1046,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 60vh;
+    height: 50vh;
     text-align: center;
     margin-top: 0;
     margin-bottom: 0%;
     position: relative; /* Para posicionar el degradado interno */
     overflow: hidden; /* Para ocultar el degradado que sobresalga */
-    transform: translateY(5.8%);
+    transform: translateY(7%);
   }
 
   .historia .contenido {
