@@ -442,7 +442,7 @@
     </div>
     <div class="contenido">
       <h2>Revolución cuántica en el machine learning: Datos transformados</h2>
-      <p class= "parrafosAppIntro" style="margin-top: 30px; margin-bottom: 20px;"> 
+      <p class= "parrafosAppIntro" style="margin-bottom: 20px;"> 
         La computación cuántica está revolucionando el aprendizaje automático mediante la codificación de datos cuánticos. Esta técnica transforma datos comunes en estados cuánticos, donde un estado cuántico indica si un qubit está en 1, 0, o una combinación de ambos simultáneamente en un instante específico. Esta capacidad única permite a los algoritmos cuánticos procesar y analizar información de manera más rápida y eficiente que los métodos clásicos de aprendizaje automático. 
       </p>
       <p class= "parrafosAppIntro"  style="margin-bottom: 60px;"> 
@@ -498,7 +498,7 @@
           <section class="step_foregroundApp">
             <div class="epi_foregroundApp">
               <h3 class="titulosApp">¿Qué medimos?</h3>
-              <p>Precisión</p>
+              <p><strong>Precisión</strong></p>
               <p class="parrafosApp">
                 Durante el entrenamiento de los modelos, medimos su rendimiento. La precisión nos dice qué tan exactas son las predicciones del modelo en comparación con los valores reales.
               </p>
@@ -508,7 +508,7 @@
           <section class="step_foregroundApp">
             <div class="epi_foregroundApp">
               <h3 class="titulosApp">¿Qué medimos?</h3>
-              <p>Tiempo de ejecución (s)</p>
+              <p><strong>Tiempo de ejecución (s) </strong></p>
               <p class="parrafosApp">
                 Este término se refiere al tiempo necesario para que el modelo complete el proceso de entrenamiento. Es crucial para evaluar la eficiencia del modelo en términos de recursos y tiempo utilizados durante el entrenamiento.
             </p>
@@ -1120,7 +1120,7 @@
   /*Estilos para la sección de desafios*/
 
   .aplicacion {
-    background: linear-gradient(to bottom, #0A122D 5%, #000000 18%); /* Degradado más corto *  margin-top: 200px; /*Adapt fondo*/
+    background: linear-gradient(to bottom, #0A122D 2.8%, #000000 18%); /* Degradado más corto *  margin-top: 200px; /*Adapt fondo*/
     display: flex;
     flex-direction: column;
     justify-content: center;
