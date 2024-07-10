@@ -705,7 +705,7 @@
   .headline {
     font-family: "Arp", sans-serif;
     font-weight: bolder;
-    font-size: 55px;
+    font-size: 50px;
     line-height: 1.2;
     font-weight: bolder;
     text-align: center;
