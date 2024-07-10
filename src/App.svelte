@@ -1080,7 +1080,7 @@
     width: 100%;
     height: 100%; /* Altura de la parte superior circular */
     background-color: #3d46f20c;
-    background-image: linear-gradient(to bottom, #3d46f210,rgb(7, 8, 27)); /* Degradado interno */
+    background-image: linear-gradient(to bottom, #3d46f23a,rgb(7, 8, 27)); /* Degradado interno */
     border-radius: 30% 30% 0 0 / 80% 80% 0 0;
     position: absolute;
     top: 0;
