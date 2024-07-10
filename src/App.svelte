@@ -997,7 +997,6 @@
     height: 100vh;
     width: 80vh;
     max-width: 100%;
-    border: 1px solid rgba(0, 0, 0, 0.4);
     color: white;
     padding: 1em;
     margin: 0 8em 2em 0;
