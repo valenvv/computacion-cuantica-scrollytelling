@@ -267,7 +267,7 @@
   <div class="qubits ">
     <div class="circle-top1"></div> <!-- Parte superior circular con degradado -->
     <div class="contenido">
-      <h2 data-aos="fade-up">Qubit: La unidad básica de información</h2>
+      <h2>Qubit: La unidad básica de información</h2>
       <p >
         A diferencia de los bits clásicos, los qubits pueden representar tanto 0 como 1 al mismo tiempo, gracias a la superposición cuántica. 
         A continuación, se describen los diferentes tipos de qubits utilizados en esta disciplina:
@@ -320,7 +320,7 @@
 <div class="qubits">
   <div class="contenido">
     <h2>Capacidad de entrelazamiento: Midiendo su eficiencia</h2>
-    <p> La capacidad de entrelazar múltiples qubits simultáneamentees crucial para el rendimiento y la potencia de los sistemas cuánticos. Cuantos más qubits se puedan entrelazar simultáneamente, mayor será la capacidad del sistema para resolver problemas complejos y realizar cálculos que están fuera del alcance de las computadoras clásicas. </p>
+    <p> La capacidad de entrelazar múltiples qubits simultáneamente es crucial para el rendimiento y la potencia de los sistemas cuánticos. Cuantos más qubits se puedan entrelazar simultáneamente, mayor será la capacidad del sistema para resolver problemas complejos y realizar cálculos que están fuera del alcance de las computadoras clásicas. </p>
     <p>A continuación, se presenta una comparación de la cantidad de qubits que se pueden entrelazar simultáneamente en diferentes sistemas de qubits:</p>
   </div>
 
@@ -1120,7 +1120,7 @@
   /*Estilos para la sección de desafios*/
 
   .aplicacion {
-    background: linear-gradient(to bottom, #0A122D 2.8%, #000000 18%); /* Degradado más corto *  margin-top: 200px; /*Adapt fondo*/
+    background: linear-gradient(to bottom, #0A122D 3.2%, #000000 11.5%); /* Degradado más corto *  margin-top: 200px; /*Adapt fondo*/
     display: flex;
     flex-direction: column;
     justify-content: center;
