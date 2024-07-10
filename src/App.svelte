@@ -211,14 +211,14 @@
     <div class="sub_principioPlay">
       <p>Viví la experiencia completa</p>
       <button class="play" on:click={togglePlayback}>
-        <img src="public/images/play.png" alt="play" width="30px">
+        <img src="./public/images/play.png" alt="play" width="30px">
       </button>
     </div>
     <Stars />
   </div>
   
   <audio id="cancion">
-    <source src="public/song/cancion.mp3" type="audio/mp3">
+    <source src="song/cancion.mp3" type="audio/mp3">
   </audio>
   
   <div class="introduccion section">
@@ -231,7 +231,7 @@
       cuánticos, o qubits, que pueden existir en múltiples estados a la vez.
     </p>
     
-    <img src="public/images/quantumComputer.png" alt="quantumComputer" />
+    <img src="/images/quantumComputer.png" alt="quantumComputer" />
     
   </div>
 
@@ -452,7 +452,7 @@
       <p class= "parrafosAppIntro"  style="margin-bottom: 60px;"> 
         El siguiente gráfico presenta una comparación entre distintos modelos de aprendizaje automático en sus versiones clásicas y cuánticas. El objetivo es visualizar las diferencias en su desempeño bajo las mismas condiciones experimentales. Se analizan desde métodos lineales hasta técnicas avanzadas de ensamblado.
       </p>
-      <!-- <iframe title="[ Insert title here ]" aria-label="Grouped Columns" id="datawrapper-chart-7wlDE" src="https://datawrapper.dwcdn.net/7wlDE/7/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="369" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();</script> -->
+      
     </div>
     <div class="graficoApp">
       <Scroller
