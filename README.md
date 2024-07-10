@@ -122,3 +122,10 @@ Para incorporar fondos dinámicos de estrellas en nuestra aplicación, comenzamo
 - [Stars Animation Effect](https://github.com/kaizhelam/stars-animation-effect/): 
 - [CodePen: Stars Animation](https://codepen.io/sarazond/pen/LYGbwj)
 
+### 5. Gráficos Personalizados
+
+Todos los gráficos del proyecto fueron inicialmente creados utilizando Datawrapper. Posteriormente, estos gráficos fueron importados y refinados utilizando Figma para asegurarnos de que su estética se alineara con el diseño general de nuestro proyecto.
+
+- **Datawrapper**: Utilizamos Datawrapper para la creación inicial de gráficos debido a su capacidad para manejar conjuntos de datos.
+- **Figma**: Rehicimos los gráficos en Figma para ajustar detalles estéticos, colores y estilos, asegurando una coherencia visual con el resto de la aplicación.
+
